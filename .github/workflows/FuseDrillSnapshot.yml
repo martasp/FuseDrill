@@ -29,5 +29,9 @@ jobs:
       run: dotnet build --no-restore
     - name: Print environment variables
       run: printenv
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Run FuseDrill CLI
       run: dotnet run --project src/FuseDrill.Cli/FuseDrill.Cli.csproj
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
