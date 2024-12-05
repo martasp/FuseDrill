@@ -9,6 +9,7 @@ using NSwag.CodeGeneration.OperationNameGenerators;
 using System.Diagnostics;
 using System.Reflection;
 using System.Text.RegularExpressions;
+using System.ComponentModel.DataAnnotations;
 using static tests.Fuzzer.DataGenerationHelper;
 
 namespace tests.Fuzzer;
@@ -288,6 +289,10 @@ public class ApiFuzzer : IApiFuzzer
             .Select(a => MetadataReference.CreateFromFile(a.Location))
             .Cast<MetadataReference>()
             .ToList();
+
+        var aditionalReferences = MetadataReference.CreateFromFile(typeof(System.ComponentModel.DataAnnotations.AllowedValuesAttribute).Assembly.Location);
+
+        references.Add(aditionalReferences);
 
         var compilation = CSharpCompilation.Create(
             assemblyName,
