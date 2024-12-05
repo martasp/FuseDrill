@@ -156,10 +156,11 @@ var httpClient = new HttpClient
 
 var tester = new ApiFuzzer(httpClient, openApiUrl);
 var snapshot = await tester.TestWholeApi();
-var snapshotString = JsonSerializer.Serialize(snapshot);
+var snapshotString = JsonSerializer.Serialize(snapshot, new JsonSerializerOptions { WriteIndented = true });
 
+var version = 0;
 // Save snapshot to a local file
-var fileName = $"api-snapshot-{DateTime.Now.ToFileTimeUtc()}.json";
+var fileName = $"api-snapshot-{version}.json";
 
 // GitHub client setup
 var github = new GitHubClient(new ProductHeaderValue("FuseDrill"));
