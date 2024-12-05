@@ -175,7 +175,7 @@ if (string.IsNullOrEmpty(owner) || string.IsNullOrEmpty(repoName))
 }
 
 // Read the branch reference
-var branchRef = $"heads/{branch}";
+var branchRef = $"refs/heads/{branch}";
 
 // Get the reference for the branch
 var reference = await github.Git.Reference.Get(owner, repoName, branchRef);
