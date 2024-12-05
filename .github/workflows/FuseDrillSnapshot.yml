@@ -24,5 +24,7 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
+    - name: Print environment variables
+      run: printenv
     - name: Run FuseDrill CLI
       run: dotnet run --project FuseDrill.Cli/FuseDrill.Cli.csproj
