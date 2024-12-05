@@ -27,4 +27,4 @@ jobs:
     - name: Print environment variables
       run: printenv
     - name: Run FuseDrill CLI
-      run: dotnet run --project FuseDrill.Cli/FuseDrill.Cli.csproj
+      run: dotnet run --project src/FuseDrill.Cli/FuseDrill.Cli.csproj
