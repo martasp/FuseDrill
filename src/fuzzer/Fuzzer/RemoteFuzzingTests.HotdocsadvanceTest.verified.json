@@ -1,0 +1,1488 @@
+﻿[
+  {
+    "ApiCalls": [
+      {
+        "MethodName": "AddTemplatesToWorkGroup_http_put_Async",
+        "Order": 1,
+        "Request": [
+          "ca63e630-415f-4821-9f8f-fbe9db201f70",
+          [
+            "d8c4a310-cb01-4f06-a4a6-629332420edb",
+            "e33e96c9-8956-4c38-9f6a-0ca04b677db3",
+            "b56bc9f3-9c31-4598-a0b3-25b9df8e15dd"
+          ]
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "AddUserGroupsToWorkGroup_http_put_Async",
+        "Order": 2,
+        "Request": [
+          "44201f80-3be2-461a-ab57-b996be65643c",
+          [
+            "699faf28-59d6-4daa-bed8-02a3637e8d90",
+            "2b202f55-3847-47d0-aee4-4ad9e201a67b",
+            "3090e94e-abef-4706-b5f3-4609397623ec"
+          ]
+        ],
+        "Response": {
+          "StatusCode": 400,
+          "Message": "The HTTP status code of the response was not expected (400).  Status: 400 Response:  \"You must supply a list of user group IDs in your request.\"",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "AddUsersToUserGroup_http_put_Async",
+        "Order": 3,
+        "Request": [
+          "8f4128ca-3944-4ff5-9ee7-baf20ed04afc",
+          [
+            "7a548732-5ded-49a1-a9f9-b654f2c67e38",
+            "ba0e5dc1-17c0-4436-b4a0-5107f01418a4",
+            "b1d749a8-a921-4dfe-8697-664b83a1fd17"
+          ]
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "AssembleDocuments_http_put_Async",
+        "Order": 4,
+        "Request": [
+          "b1308268-8fc1-4b3c-903f-864c0b9ab815",
+          "RandomString150"
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "CompleteAssemblySession_http_put_Async",
+        "Order": 5,
+        "Request": [
+          "efa8ab11-16cc-4e17-a134-29b0eb9153a3",
+          {
+            "RunAssembly": true
+          }
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "CompleteAssemblySessionByVersion_http_put_Async",
+        "Order": 6,
+        "Request": [
+          "e266e36e-0d19-41bc-a123-b161ebde516a",
+          "2855f571-6c9b-4219-a05b-136a64ae33a9",
+          {
+            "RunAssembly": true
+          }
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "CreateAssemblySession_http_put_Async",
+        "Order": 7,
+        "Request": [
+          "2f7a324a-9a92-4b33-b4f4-ac3f484a5f81",
+          "114d5d1f-0102-44c9-81bd-fa51fc33f008",
+          {
+            "AnswerXml": "RandomString252",
+            "ForceCreate": false
+          }
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "CreateClientAccount_http_put_Async",
+        "Order": 8,
+        "Request": [
+          "6342ef1e-f4ba-4730-a4a5-e112c80ae38e",
+          {
+            "FirstName": "RandomString908",
+            "LastName": "RandomString907",
+            "Email": "RandomString176",
+            "Title": "RandomString822",
+            "MobileNumber": "RandomString886",
+            "MobileNumberCountryIsoCode": "RandomString107"
+          }
+        ],
+        "Response": {
+          "StatusCode": 400,
+          "Message": "The HTTP status code of the response was not expected (400).  Status: 400 Response:  {\"email\":[\"The Email field is not a valid e-mail address.\"],\"mobileNumber\":[\"Phone number is invalid. Spaces are allowed\"],\"mobileNumberCountryIsoCode\":[\"The MobileNumberCountryIsoCode field must contain a code in the format AA specified in ISO 3166-1 alpha-2.\",\"The field MobileNumberCountryIsoCode must be a string with a maximum length of 2.\"]}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "CreateNewClientInterview_http_put_Async",
+        "Order": 9,
+        "Request": [
+          "a0d46d66-6ee1-4401-a4af-59b74091dcf9",
+          "cad11c93-6ea5-4be0-b247-18a41aacd0f5",
+          {
+            "ClientAccountId": "RandomString644"
+          }
+        ],
+        "Response": {
+          "StatusCode": 400,
+          "Message": "The HTTP status code of the response was not expected (400).  Status: 400 Response:  {\"errorType\":\"BadRequestException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The specified account id doesn't conform to the correct format.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "CreateOrUpdatePublicInterviewLink_http_put_Async",
+        "Order": 10,
+        "Request": [
+          "8fd589b6-131a-46c1-9f00-32b911c952b1",
+          {
+            "Name": "RandomString601",
+            "WorkGroupId": "7e27a3c8-f8c2-488c-ae9a-555ceaf8de63",
+            "TemplatePackageId": "07078a6c-7969-4f09-9385-6daef1217dc6",
+            "IsActive": false
+          }
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "CreateUser_http_post_Async",
+        "Order": 11,
+        "Request": [
+          "cbcd2ce3-91f4-4648-ac79-6cda35085356",
+          {
+            "FirstName": "RandomString579",
+            "LastName": "RandomString577",
+            "EmailAddress": "RandomString699",
+            "Roles": [
+              "Author",
+              "SiteAdministrator",
+              "Viewer"
+            ],
+            "SendEmail": false
+          }
+        ],
+        "Response": {
+          "StatusCode": 500,
+          "Message": "The HTTP status code of the response was not expected (500).  Status: 500 Response:  {\"errorType\":\"InternalServerException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"There was an error processing your request.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "post"
+      },
+      {
+        "MethodName": "DeleteClientAccount_http_delete_Async",
+        "Order": 12,
+        "Request": "8a3ceb18-37de-4c4d-8f69-ac15b295a095",
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "delete"
+      },
+      {
+        "MethodName": "DeleteLatestAssemblySession_http_delete_Async",
+        "Order": 13,
+        "Request": "cd02be76-a38f-4fb9-a55a-9b7c3e7b48ca",
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "delete"
+      },
+      {
+        "MethodName": "DeleteLatestAssemblySessionByVersion_http_delete_Async",
+        "Order": 14,
+        "Request": [
+          "e0b59194-06b7-4f69-9f5d-dd7089f3a0c0",
+          "ebd4a904-8270-440b-b1ed-25839bd0de13"
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "delete"
+      },
+      {
+        "MethodName": "DeleteMainLogo_http_delete_Async",
+        "Order": 15,
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "delete"
+      },
+      {
+        "MethodName": "DeletePublicInterviewLink_http_delete_Async",
+        "Order": 16,
+        "Request": "2080e121-bfe0-4fde-94d3-6d32c649c672",
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "delete"
+      },
+      {
+        "MethodName": "DeleteWorkGroupDefaultAnswers_http_delete_Async",
+        "Order": 17,
+        "Request": "9478dab9-5ca7-425a-8640-afcae1e5938e",
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "delete"
+      },
+      {
+        "MethodName": "DeleteWorkItem_http_delete_Async",
+        "Order": 18,
+        "Request": "a74ec97f-8072-44e0-8b64-979d14d8aee8",
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "delete"
+      },
+      {
+        "MethodName": "EditWorkItemProperties_http_patch_Async",
+        "Order": 19,
+        "Request": [
+          "c1cab326-4958-456b-876e-999f10148e6e",
+          {
+            "Name": "RandomString498"
+          }
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "patch"
+      },
+      {
+        "MethodName": "GetActiveAnswerFileContent_http_get_Async",
+        "Order": 20,
+        "Request": [
+          "001ffafc-fa39-4934-83c5-bdfdad92c6a3",
+          null
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetActiveAssemblySessionDocuments_http_get_Async",
+        "Order": 21,
+        "Request": [
+          "36d21b2d-5d35-4f89-83e6-4134b7d5285d",
+          "eeb12534-b306-4790-a380-2800ca70eb0c",
+          28,
+          "RandomString782",
+          null,
+          11
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetActiveWorkItemVersionDocumentContent_http_get_Async",
+        "Order": 22,
+        "Request": [
+          "709f7da8-fcff-4853-8011-6d9c5fc988e1",
+          "8b7a9dd8-120b-45b4-8955-92fa35ea4674"
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetAllClientAccounts_http_get_Async",
+        "Order": 23,
+        "Request": [
+          "RandomString515",
+          78,
+          "RandomString764",
+          null,
+          null
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetAllInterviews_http_get_Async",
+        "Order": 24,
+        "Request": [
+          null,
+          "RandomString769",
+          null,
+          32,
+          null,
+          null
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetAllTemplatePackages_http_get_Async",
+        "Order": 25,
+        "Request": [
+          "RandomString862",
+          88,
+          "RandomString608",
+          null,
+          null,
+          null
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetAllTemplatePackageVersions_http_get_Async",
+        "Order": 26,
+        "Request": [
+          46,
+          "RandomString684",
+          null,
+          null
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetAllUserGroups_http_get_Async",
+        "Order": 27,
+        "Request": [
+          "RandomString110",
+          null,
+          30,
+          "RandomString748",
+          null,
+          45
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetAllUsers_http_get_Async",
+        "Order": 28,
+        "Request": [
+          "RandomString156",
+          90,
+          "RandomString740",
+          null,
+          null
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetAllVersions_http_get_Async",
+        "Order": 29,
+        "Request": [
+          "f9cb1583-6ec7-403d-8f5a-96c44efdee45",
+          null,
+          "RandomString427",
+          null,
+          92
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetAllWorkGroups_http_get_Async",
+        "Order": 30,
+        "Request": [
+          "RandomString324",
+          null,
+          null,
+          "RandomString697",
+          null,
+          20
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetAllWorkItems_http_get_Async",
+        "Order": 31,
+        "Request": [
+          "RandomString847",
+          null,
+          "RandomString298",
+          null,
+          57,
+          "DateTimeOffset_1",
+          null,
+          "DateTimeOffset_2",
+          "DateTimeOffset_3"
+        ],
+        "Response": {
+          "StatusCode": 400,
+          "Message": "The HTTP status code of the response was not expected (400).  Status: 400 Response:  {\"errorType\":\"ValidationException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"\\\"From\\\" date must be on or before the actual date.\",\"friendlyErrorType\":\"Error\",\"errorData\":{\"_fromDate\":\"REMOVED_DATE\"}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetAnswerFile_http_get_Async",
+        "Order": 32,
+        "Request": "826afc9c-165b-413c-b964-a783f0c2c17e",
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetAnswerFileContent_http_get_Async",
+        "Order": 33,
+        "Request": [
+          "579c79c0-b96a-47df-8227-c53a776972e0",
+          null
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetAnswerFileContentByVersion_http_get_Async",
+        "Order": 34,
+        "Request": [
+          "ed89b8a1-1480-42af-b66d-952a4d5ab7d3",
+          "1124ce9a-4c71-4357-9c22-80335002aa0f",
+          null
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetAssemblySessionDocuments_http_get_Async",
+        "Order": 35,
+        "Request": [
+          "37e1c7f2-d339-4cfe-8a39-20fd23b5faa7",
+          16,
+          "RandomString782",
+          null,
+          null
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetAssemblySessionDocuments2_http_get_Async",
+        "Order": 36,
+        "Request": [
+          "556e6144-a560-4dd1-937b-1134c2853885",
+          null,
+          "RandomString987",
+          null,
+          37
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetClientAccount_http_get_Async",
+        "Order": 37,
+        "Request": "374777cf-5a2b-46bf-a8d8-c35e6201cb90",
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetClientInterview_http_get_Async",
+        "Order": 38,
+        "Request": "93d78c58-a002-4e18-a7eb-3a9e7d742fef",
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetDefaultAnswersForWorkGroup_http_get_Async",
+        "Order": 39,
+        "Request": [
+          "cdd9d858-371a-4529-a66a-35bab7b2d2c1",
+          null
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetMainLogoImage_http_get_Async",
+        "Order": 40,
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetPublicInterviewLink_http_get_Async",
+        "Order": 41,
+        "Request": "ec2da7ba-05a8-4fc5-9ef8-0f402020e9b3",
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetPublicInterviewLinks_http_get_Async",
+        "Order": 42,
+        "Request": [
+          "278906d4-76fd-4221-91ad-976a5e967418",
+          null,
+          91,
+          "RandomString261",
+          null,
+          null
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetSubscription_http_get_Async",
+        "Order": 43,
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetTemplatePackageDetail_http_get_Async",
+        "Order": 44,
+        "Request": "aa135247-216e-4927-a5c5-818210e3ac48",
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetTemplatePackageVersionContent_http_get_Async",
+        "Order": 45,
+        "Request": "0c30bc99-d689-4d58-8400-629a27a73b13",
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetTemplatePackageVersionDetail_http_get_Async",
+        "Order": 46,
+        "Request": "b48d666c-7d76-458e-b979-ebe816e84db3",
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetTemplatePackageVersions_http_get_Async",
+        "Order": 47,
+        "Request": [
+          "28dfd0c8-3ba5-40b9-bae5-e56ebe8cc23e",
+          30,
+          "RandomString348",
+          null,
+          null
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetTemplatePackageVersionVariableData_http_get_Async",
+        "Order": 48,
+        "Request": "1bd1f856-db2d-4012-aa70-17dcb2aed256",
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetUserDetail_http_get_Async",
+        "Order": 49,
+        "Request": "306e13c7-1cac-41ba-9820-966db7ad5ea7",
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetUserGroupDetail_http_get_Async",
+        "Order": 50,
+        "Request": "cf5ca2d1-c3fe-49fa-a9a9-8589cd09bb10",
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetUserGroupsForWorkGroup_http_get_Async",
+        "Order": 51,
+        "Request": [
+          "75766bba-e500-49fd-be40-830d44a4593d",
+          86,
+          "RandomString256",
+          null,
+          89
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetUserGroupUsers_http_get_Async",
+        "Order": 52,
+        "Request": [
+          "19035802-07a4-4703-b0c3-8e6486b34b36",
+          52,
+          "RandomString496",
+          null,
+          null
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetUserUserGroups_http_get_Async",
+        "Order": 53,
+        "Request": [
+          "3fbd9123-84ec-4084-8778-5dffacbeb712",
+          73,
+          "RandomString700",
+          null,
+          63
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetVersionInfo_http_get_Async",
+        "Order": 54,
+        "Request": [
+          "f57d0ea1-bea9-4df1-8629-c81d6a2e709a",
+          "831f2cc3-4fb2-45b8-8fb8-c8fb39c38b4b"
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetWorkGroupDetail_http_get_Async",
+        "Order": 55,
+        "Request": "8381aa0e-4a40-4643-9243-404e95e1418f",
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetWorkGroupImageContent_http_get_Async",
+        "Order": 56,
+        "Request": [
+          "30af7846-5a3b-4147-9617-65f1f6f6d443",
+          "c00e7c9d-edac-4959-a859-f06f0f69cfad",
+          false
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetWorkGroupTemplates_http_get_Async",
+        "Order": 57,
+        "Request": [
+          "5b14c0b4-b40f-4f62-ad28-e552d09c6ffd",
+          10,
+          "RandomString521",
+          null,
+          null
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetWorkGroupWorkItems_http_get_Async",
+        "Order": 58,
+        "Request": [
+          "351e59e2-e247-4869-82ec-48b77abd4113",
+          "RandomString925",
+          63,
+          "RandomString279",
+          null,
+          2
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetWorkItemDetail_http_get_Async",
+        "Order": 59,
+        "Request": "969431c0-5489-4100-b7b6-dbf5555ba2de",
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetWorkItemDocument_http_get_Async",
+        "Order": 60,
+        "Request": [
+          "8a4b2d13-40ec-4de0-9712-5a5cce6fac78",
+          "ed986523-b0a1-4559-9831-3591dc8467e6"
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetWorkItemDocument2_http_get_Async",
+        "Order": 61,
+        "Request": [
+          "3f2d5070-d30f-4f90-9066-be76f9a44347",
+          "efd2630a-b5c2-433c-9335-b2bb0b4f5153",
+          "7eeb74ab-6d41-4f69-9518-9c3bf2e31c33"
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetWorkItemDocument3_http_get_Async",
+        "Order": 62,
+        "Request": [
+          "7987eded-78b1-4a23-93ca-6bd921d47400",
+          "84cb6b15-c5b8-4d05-ba82-19a9180170f0"
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetWorkItemDocumentContent_http_get_Async",
+        "Order": 63,
+        "Request": [
+          "1dce7e18-d8c8-42a1-9030-6a76018f2e01",
+          "86259ba4-9718-487b-a7e9-7e2f5e7aa211"
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetWorkItemDocumentContentByVersion_http_get_Async",
+        "Order": 64,
+        "Request": [
+          "a3c07b59-5606-4d38-8998-33875a8e9c6a",
+          "7c051854-eadc-40d7-82a5-35de5972d4d6",
+          "851d598e-8ace-4dfa-a3e7-bd8064f3ce59"
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetWorkItemImageContent_http_get_Async",
+        "Order": 65,
+        "Request": [
+          "45da134d-2574-4f34-a43f-a160205ae457",
+          "01f95dc3-1671-499c-9db7-19f42c571c0e",
+          false
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "HeadTemplatePackageVersionContent_http_head_Async",
+        "Order": 66,
+        "Request": "8e974590-6861-4d24-a18e-e99a2c080365",
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "head"
+      },
+      {
+        "MethodName": "InitializeWorkItem_http_put_Async",
+        "Order": 67,
+        "Request": [
+          "ccfa06bc-36e7-4077-a8bd-0c3f424c2392",
+          {
+            "WorkGroupId": "9fc94389-34bf-40fc-9cc4-350ee0838b10",
+            "Name": "RandomString720",
+            "Description": "RandomString284",
+            "TemplatePackageId": "0a13169a-59f5-46ce-a6a4-5ce46a946b57",
+            "AnswerXml": "RandomString697",
+            "AssembleImmediately": false,
+            "IsPrivateToOwner": true
+          }
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "PatchAnswerFile_http_patch_Async",
+        "Order": 68,
+        "Request": [
+          "6a0a87a5-22f0-4901-b0a4-31fb4e7bb20c",
+          {
+            "IsHidden": false
+          }
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "patch"
+      },
+      {
+        "MethodName": "PatchDocument_http_patch_Async",
+        "Order": 69,
+        "Request": [
+          "d1704e7e-ce39-4357-b75a-a1a28872a2d1",
+          "0b13218d-1aa8-48d3-a455-c1726096eee2",
+          "9a91d85e-92cf-486c-b237-f8c85fc6a732",
+          {
+            "IsHidden": false
+          }
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "patch"
+      },
+      {
+        "MethodName": "PatchDocument2_http_patch_Async",
+        "Order": 70,
+        "Request": [
+          "9f5ac02a-d601-4b64-976c-e30de5d2616b",
+          "e0b044bf-0108-45fa-9a58-71210af89ead",
+          {
+            "IsHidden": true
+          }
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "patch"
+      },
+      {
+        "MethodName": "PutDefaultAnswersForWorkGroup_http_put_Async",
+        "Order": 71,
+        "Request": [
+          "94d536e3-5d43-4d02-9fb7-2688abcd6497",
+          {
+            "AnswerXml": "RandomString632"
+          }
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "PutDocument_http_put_Async",
+        "Order": 72,
+        "Request": [
+          "51f782a0-2886-44c5-84a8-6443701fce35",
+          "8b9c017e-7cd7-4ee6-b3e9-4ad42cae8b0d",
+          "1b58ae8a-3eb6-4d5c-90ef-feb49ee9ae98",
+          "RandomString411",
+          "RandomString945",
+          54,
+          {
+            "FileName": "mocked.txt",
+            "ContentType": "text/plain"
+          }
+        ],
+        "Response": {
+          "StatusCode": 400,
+          "Message": "The HTTP status code of the response was not expected (400).  Status: 400 Response:  \"The content type is not valid for the uploaded document\"",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "PutDocument2_http_put_Async",
+        "Order": 73,
+        "Request": [
+          "24850bc7-489b-4d9d-9ef1-78961c57b8c2",
+          "407fb2c6-8fa4-477b-be32-10ca3ab17bd9",
+          "RandomString884",
+          "RandomString949",
+          82,
+          {
+            "FileName": "mocked.txt",
+            "ContentType": "text/plain"
+          }
+        ],
+        "Response": {
+          "StatusCode": 400,
+          "Message": "The HTTP status code of the response was not expected (400).  Status: 400 Response:  \"The content type is not valid for the uploaded document\"",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "PutImageContent_http_put_Async",
+        "Order": 74,
+        "Request": [
+          "6d7f3328-bfa0-4e2e-b767-974730ecd1a5",
+          "RandomString791",
+          {
+            "FileName": "mocked.txt",
+            "ContentType": "text/plain"
+          }
+        ],
+        "Response": {
+          "StatusCode": 400,
+          "Message": "The HTTP status code of the response was not expected (400).  Status: 400 Response:  \"The content type is not valid for the uploaded image\"",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "PutImageContentForVersion_http_put_Async",
+        "Order": 75,
+        "Request": [
+          "903826ed-a59e-4869-9363-2d759f155c11",
+          "3293993a-9f11-40e5-9c70-169ac9994de0",
+          "RandomString916",
+          {
+            "FileName": "mocked.txt",
+            "ContentType": "text/plain"
+          }
+        ],
+        "Response": {
+          "StatusCode": 400,
+          "Message": "The HTTP status code of the response was not expected (400).  Status: 400 Response:  \"The content type is not valid for the uploaded image\"",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "PutMainLogoImage_http_put_Async",
+        "Order": 76,
+        "Request": [
+          "RandomString638",
+          {
+            "FileName": "mocked.txt",
+            "ContentType": "text/plain"
+          }
+        ],
+        "Response": {
+          "StatusCode": 415,
+          "Message": "The HTTP status code of the response was not expected (415).  Status: 415 Response:  \"The content type is not valid for the uploaded image\"",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "RemoveTemplatesFromWorkGroup_http_delete_Async",
+        "Order": 77,
+        "Request": [
+          "ee0d9993-8e8a-4516-8d5c-01a9d7513b35",
+          [
+            "733e53f6-4ec2-4741-b32d-8fcf6f39154c",
+            "c382999f-4b03-440f-9cdc-d2895fb398c4",
+            "faa2935f-62a1-4543-9836-bb5cff46c593"
+          ]
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "delete"
+      },
+      {
+        "MethodName": "RemoveUserGroupsFromWorkGroup_http_delete_Async",
+        "Order": 78,
+        "Request": [
+          "3e09b446-77cf-4b31-8439-57e67bb8777f",
+          [
+            "db70ca95-1b97-4dab-963c-6bcd8fb205d5",
+            "aa423e16-5aaa-47f5-a1f7-b5670b5dc99f",
+            "35c73bbe-ead6-4afc-89cc-e8920b631b92"
+          ]
+        ],
+        "Response": {
+          "StatusCode": 400,
+          "Message": "The HTTP status code of the response was not expected (400).  Status: 400 Response:  \"You must supply a list of user group IDs in your request.\"",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "delete"
+      },
+      {
+        "MethodName": "RemoveUsersFromUserGroup_http_delete_Async",
+        "Order": 79,
+        "Request": [
+          "3dcf8133-cd75-4ad5-9488-799f654331f8",
+          [
+            "540fcb73-d0ea-4cff-8217-a1de7262dbfe",
+            "893323dc-8c8d-412a-a58d-604d705cc5c5",
+            "3f1fef9a-c654-43a7-82a2-fa5d2bf7c871"
+          ]
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "delete"
+      },
+      {
+        "MethodName": "RevokeClientInterview_http_put_Async",
+        "Order": 80,
+        "Request": "41c37bad-a80f-476b-a11e-ee5d70b2bce6",
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "SaveAssemblySession_http_put_Async",
+        "Order": 81,
+        "Request": "8343dc52-9c43-45a9-bcd0-07ea91ccc56e",
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "SaveAssemblySessionByVersion_http_put_Async",
+        "Order": 82,
+        "Request": [
+          "f4a0eec4-8398-42b5-8337-9e36d84af3cf",
+          "4f0b14e6-45b3-412e-91ae-c53ea08055d5"
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "SetPostProcessingStatus_http_put_Async",
+        "Order": 83,
+        "Request": [
+          "81988058-c712-4e4d-a651-ff0bfd733c31",
+          "7d0438dd-76c0-4fba-808f-23e9bd765103",
+          {
+            "Success": true,
+            "Message": "RandomString345"
+          }
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "SetPostProcessingStatus2_http_put_Async",
+        "Order": 84,
+        "Request": [
+          "71b158dd-1fbd-4cc6-a862-4622135e7293",
+          {
+            "Success": true,
+            "Message": "RandomString204"
+          }
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "SetTemplatePackageStatus_http_put_Async",
+        "Order": 85,
+        "Request": [
+          "e114d87c-19c5-43c1-a464-11affffb2934",
+          true
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "SetTemplatePackageVersionLiveDate_http_put_Async",
+        "Order": 86,
+        "Request": [
+          "e47a6c80-84b6-474d-b99e-7bc5772915e9",
+          "DateTimeOffset_4"
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "SetUserGroupStatus_http_put_Async",
+        "Order": 87,
+        "Request": [
+          "9892fcb5-39b0-427b-ab79-634af8dfc88e",
+          false
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "SetUserRoles_http_put_Async",
+        "Order": 88,
+        "Request": [
+          "8f2197ed-6d93-43df-87df-ece79915731f",
+          {
+            "Roles": [
+              "SiteAdministrator",
+              "IntegrationAdministrator",
+              "SiteAdministrator"
+            ]
+          }
+        ],
+        "Response": {
+          "StatusCode": 500,
+          "Message": "The HTTP status code of the response was not expected (500).  Status: 500 Response:  {\"errorType\":\"InternalServerException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"There was an error processing your request.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "SetUserStatus_http_put_Async",
+        "Order": 89,
+        "Request": [
+          "6940bbe7-5854-44d3-aea5-9cfce91620fc",
+          null
+        ],
+        "Response": {
+          "StatusCode": 400,
+          "Message": "The HTTP status code of the response was not expected (400).  Status: 400 Response:  \"You must supply a value of 'true' (activate the user) or 'false' (deactivate the user)\"",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "SetWorkGroupStatus_http_put_Async",
+        "Order": 90,
+        "Request": [
+          "256825e8-8db8-4c32-b544-e04dd6d9602e",
+          null
+        ],
+        "Response": {
+          "StatusCode": 400,
+          "Message": "The HTTP status code of the response was not expected (400).  Status: 400 Response:  \"You must supply a value of 'true' (activate the work group) or 'false' (deactivate the work group)\"",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "SetWorkItemName_http_put_Async",
+        "Order": 91,
+        "Request": [
+          "2eac382c-36cc-49c0-b17d-6be203d17819",
+          "RandomString269"
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "UpdateUser_http_put_Async",
+        "Order": 92,
+        "Request": [
+          "2b315937-2e2e-4c0e-9f14-f3a717cb3cce",
+          {
+            "FirstName": "RandomString270",
+            "LastName": "RandomString813",
+            "EmailAddress": "RandomString874"
+          }
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "UploadPostTemplatePackage_http_post_Async",
+        "Order": 93,
+        "Request": [
+          "ee1bc250-aca8-4fc7-87ba-7173673453a2",
+          "RandomString533",
+          {
+            "FileName": "mocked.txt",
+            "ContentType": "text/plain"
+          }
+        ],
+        "Response": {
+          "StatusCode": 415,
+          "Message": "The HTTP status code of the response was not expected (415).  Status: 415 Response:",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "post"
+      },
+      {
+        "MethodName": "UploadPutTemplatePackage_http_put_Async",
+        "Order": 94,
+        "Request": [
+          "0afd11fc-619d-42ed-8cd1-d9b12e1357e7",
+          "RandomString768",
+          {
+            "FileName": "mocked.txt",
+            "ContentType": "text/plain"
+          }
+        ],
+        "Response": {
+          "StatusCode": 415,
+          "Message": "The HTTP status code of the response was not expected (415).  Status: 415 Response:",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "UpsertUserGroup_http_put_Async",
+        "Order": 95,
+        "Request": [
+          "6a1bc1c9-7f89-4f67-8712-6da18c72c429",
+          {
+            "Name": "RandomString737",
+            "Description": "RandomString190"
+          }
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      },
+      {
+        "MethodName": "UpsertWorkGroup_http_put_Async",
+        "Order": 96,
+        "Request": [
+          "b2ddec9b-2e60-4bcc-9aee-5d98a61a8cd6",
+          {
+            "Name": "RandomString209",
+            "Description": "RandomString430",
+            "HasAllTemplates": false
+          }
+        ],
+        "Response": {
+          "StatusCode": 401,
+          "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"errorType\":\"UnauthenticatedException\",\"errorTitle\":\"Server error\",\"errorMessage\":\"The user must be authenticated.\",\"friendlyErrorType\":\"Error\",\"errorData\":{}}",
+          "TypeName": "ApiException"
+        },
+        "HttpMethod": "put"
+      }
+    ]
+  }
+]

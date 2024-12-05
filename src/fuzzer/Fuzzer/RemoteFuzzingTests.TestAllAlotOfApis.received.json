@@ -1,0 +1,218 @@
+﻿[
+  {
+    "ApiCalls": [
+      {
+        "MethodName": "GetAuthIntrospect_http_get_Async",
+        "Order": 1,
+        "Response": {
+          "StatusCode": 401,
+          "Message": "Unauthorized  Status: 401 Response:",
+          "TypeName": "ApiException`1"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetItemUsages_http_post_Async",
+        "Order": 2,
+        "Request": {},
+        "Response": {
+          "StatusCode": 401,
+          "Message": "Unauthorized  Status: 401 Response:",
+          "TypeName": "ApiException`1"
+        },
+        "HttpMethod": "post"
+      },
+      {
+        "MethodName": "GetSignInAttempts_http_post_Async",
+        "Order": 3,
+        "Request": {},
+        "Response": {
+          "StatusCode": 401,
+          "Message": "Unauthorized  Status: 401 Response:",
+          "TypeName": "ApiException`1"
+        },
+        "HttpMethod": "post"
+      }
+    ]
+  },
+  {
+    "ApiCalls": [
+      {
+        "MethodName": "GetAuthIntrospect_http_get_Async",
+        "Order": 1,
+        "Response": {
+          "StatusCode": 401,
+          "Message": "Unauthorized  Status: 401 Response:",
+          "TypeName": "ApiException`1"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetSignInAttempts_http_post_Async",
+        "Order": 2,
+        "Request": {},
+        "Response": {
+          "StatusCode": 401,
+          "Message": "Unauthorized  Status: 401 Response:",
+          "TypeName": "ApiException`1"
+        },
+        "HttpMethod": "post"
+      },
+      {
+        "MethodName": "GetItemUsages_http_post_Async",
+        "Order": 3,
+        "Request": {},
+        "Response": {
+          "StatusCode": 401,
+          "Message": "Unauthorized  Status: 401 Response:",
+          "TypeName": "ApiException`1"
+        },
+        "HttpMethod": "post"
+      }
+    ]
+  },
+  {
+    "ApiCalls": [
+      {
+        "MethodName": "GetItemUsages_http_post_Async",
+        "Order": 1,
+        "Request": {},
+        "Response": {
+          "StatusCode": 401,
+          "Message": "Unauthorized  Status: 401 Response:",
+          "TypeName": "ApiException`1"
+        },
+        "HttpMethod": "post"
+      },
+      {
+        "MethodName": "GetAuthIntrospect_http_get_Async",
+        "Order": 2,
+        "Response": {
+          "StatusCode": 401,
+          "Message": "Unauthorized  Status: 401 Response:",
+          "TypeName": "ApiException`1"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetSignInAttempts_http_post_Async",
+        "Order": 3,
+        "Request": {},
+        "Response": {
+          "StatusCode": 401,
+          "Message": "Unauthorized  Status: 401 Response:",
+          "TypeName": "ApiException`1"
+        },
+        "HttpMethod": "post"
+      }
+    ]
+  },
+  {
+    "ApiCalls": [
+      {
+        "MethodName": "GetSignInAttempts_http_post_Async",
+        "Order": 1,
+        "Request": {},
+        "Response": {
+          "StatusCode": 401,
+          "Message": "Unauthorized  Status: 401 Response:",
+          "TypeName": "ApiException`1"
+        },
+        "HttpMethod": "post"
+      },
+      {
+        "MethodName": "GetAuthIntrospect_http_get_Async",
+        "Order": 2,
+        "Response": {
+          "StatusCode": 401,
+          "Message": "Unauthorized  Status: 401 Response:",
+          "TypeName": "ApiException`1"
+        },
+        "HttpMethod": "get"
+      },
+      {
+        "MethodName": "GetItemUsages_http_post_Async",
+        "Order": 3,
+        "Request": {},
+        "Response": {
+          "StatusCode": 401,
+          "Message": "Unauthorized  Status: 401 Response:",
+          "TypeName": "ApiException`1"
+        },
+        "HttpMethod": "post"
+      }
+    ]
+  },
+  {
+    "ApiCalls": [
+      {
+        "MethodName": "GetSignInAttempts_http_post_Async",
+        "Order": 1,
+        "Request": {},
+        "Response": {
+          "StatusCode": 401,
+          "Message": "Unauthorized  Status: 401 Response:",
+          "TypeName": "ApiException`1"
+        },
+        "HttpMethod": "post"
+      },
+      {
+        "MethodName": "GetItemUsages_http_post_Async",
+        "Order": 2,
+        "Request": {},
+        "Response": {
+          "StatusCode": 401,
+          "Message": "Unauthorized  Status: 401 Response:",
+          "TypeName": "ApiException`1"
+        },
+        "HttpMethod": "post"
+      },
+      {
+        "MethodName": "GetAuthIntrospect_http_get_Async",
+        "Order": 3,
+        "Response": {
+          "StatusCode": 401,
+          "Message": "Unauthorized  Status: 401 Response:",
+          "TypeName": "ApiException`1"
+        },
+        "HttpMethod": "get"
+      }
+    ]
+  },
+  {
+    "ApiCalls": [
+      {
+        "MethodName": "GetItemUsages_http_post_Async",
+        "Order": 1,
+        "Request": {},
+        "Response": {
+          "StatusCode": 401,
+          "Message": "Unauthorized  Status: 401 Response:",
+          "TypeName": "ApiException`1"
+        },
+        "HttpMethod": "post"
+      },
+      {
+        "MethodName": "GetSignInAttempts_http_post_Async",
+        "Order": 2,
+        "Request": {},
+        "Response": {
+          "StatusCode": 401,
+          "Message": "Unauthorized  Status: 401 Response:",
+          "TypeName": "ApiException`1"
+        },
+        "HttpMethod": "post"
+      },
+      {
+        "MethodName": "GetAuthIntrospect_http_get_Async",
+        "Order": 3,
+        "Response": {
+          "StatusCode": 401,
+          "Message": "Unauthorized  Status: 401 Response:",
+          "TypeName": "ApiException`1"
+        },
+        "HttpMethod": "get"
+      }
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!--<UserSecretsId>dotnet-DotNet.ContainerImage-2e40c179-a00b-4cc9-9785-54266210b7eb</UserSecretsId>-->
+    <ContainerRepository>fusedrill/testapi</ContainerRepository>
+    <ContainerTag>1.0.1</ContainerTag>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+  </ItemGroup>
+
+</Project>
