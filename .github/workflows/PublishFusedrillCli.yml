@@ -11,7 +11,7 @@ permissions:
   statuses: write
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
 
     steps:
@@ -33,20 +33,8 @@ jobs:
     - name: Rename Executable
       run: mv ./publish/FuseDrill.Cli ./FuseDrill
 
-    - name: Upload Executable to GitHub Release
-      uses: actions/upload-release-asset@v1
-      with:
-        upload_url: ${{ github.event.release.upload_url }}
-        asset_path: ./FuseDrill
-        asset_name: FuseDrill
-        asset_content_type: application/octet-stream
-
-  create-release:
-    runs-on: ubuntu-latest
-    needs: build
-
-    steps:
     - name: Create GitHub Release
+      id: create_release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -55,3 +43,11 @@ jobs:
         release_name: "Release ${{ github.ref_name }}"
         draft: false
         prerelease: false
+
+    - name: Upload Executable to GitHub Release
+      uses: actions/upload-release-asset@v1
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./FuseDrill
+        asset_name: FuseDrill
+        asset_content_type: application/octet-stream
