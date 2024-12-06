@@ -138,8 +138,8 @@ var owner = envars["GITHUB_REPOSITORY_OWNER"]?.ToString(); // e.g., "owner"
 var repoName = envars["GITHUB_REPOSITORY"]?.ToString()?.Split('/')?[1]; // e.g., "repo-name"
 var branch = envars["GITHUB_HEAD_REF"]?.ToString(); // e.g., "refs/heads/branch-name"
 var token = envars["GITHUB_TOKEN"]?.ToString();
-var fuseDrillBaseAddres = envars["FUSEDRILL_BASE_ADDRESS"]?.ToString();
-var fuseDrillOpenApiUrl = envars["FUSEDRILL_OPENAPI_URL"]?.ToString();
+var fuseDrillBaseAddres = (envars["FUSEDRILL_BASE_ADDRESS"] ?? throw new Exception("FUSEDRILL_BASE_ADDRESS not found in environment variables.")).ToString();
+var fuseDrillOpenApiUrl = (envars["FUSEDRILL_OPENAPI_URL"] ?? throw new Exception("FUSEDRILL_OPENAPI_URL not found in environment variables.")).ToString();
 var fuseDrillTestAccountOAuthHeaderValue = envars["FUSEDRILL_TEST_ACCOUNT_OAUTH_HEADER_VALUE"]?.ToString();
 
 if (string.IsNullOrEmpty(branch))
