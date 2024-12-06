@@ -1,6 +1,6 @@
-name: FuseDrill"
-description: "Automatic fuzzing|simulation testing for open apis"
-author: Martynas Pocius
+name: 'FuseDrill'
+description: 'Automatic fuzzing|simulation testing for open apis'
+author: 'Martynas Pocius'
 branding:
   icon: "zap"
   color: "green"
