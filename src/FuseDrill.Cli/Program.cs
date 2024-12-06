@@ -138,6 +138,9 @@ var owner = envars["GITHUB_REPOSITORY_OWNER"]?.ToString(); // e.g., "owner"
 var repoName = envars["GITHUB_REPOSITORY"]?.ToString()?.Split('/')?[1]; // e.g., "repo-name"
 var branch = envars["GITHUB_HEAD_REF"]?.ToString(); // e.g., "refs/heads/branch-name"
 var token = envars["GITHUB_TOKEN"]?.ToString();
+var fuseDrillBaseAddres = envars["FUSEDRILL_BASE_ADDRESS"]?.ToString();
+var fuseDrillOpenApiUrl = envars["FUSEDRILL_OPENAPI_URL"]?.ToString();
+var fuseDrillTestAccountOAuthHeaderValue = envars["FUSEDRILL_TEST_ACCOUNT_OAUTH_HEADER_VALUE"]?.ToString();
 
 if (string.IsNullOrEmpty(branch))
 {
@@ -146,16 +149,18 @@ if (string.IsNullOrEmpty(branch))
 }
 
 // API details
-var baseAddress = "https://api.apis.guru/v2";
-var openApiUrl = "https://api.apis.guru/v2/openapi.yaml";
+//var baseAddress = "https://api.apis.guru/v2";
+//var openApiUrl = "https://api.apis.guru/v2/openapi.yaml";
 
 // Fuzz testing the API
 var httpClient = new HttpClient
 {
-    BaseAddress = new Uri(baseAddress)
+    BaseAddress = new Uri(fuseDrillBaseAddres),
 };
 
-var tester = new ApiFuzzer(httpClient, openApiUrl);
+httpClient.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", fuseDrillTestAccountOAuthHeaderValue);
+
+var tester = new ApiFuzzer(httpClient, fuseDrillOpenApiUrl);
 var snapshot = await tester.TestWholeApi();
 var snapshotString = JsonSerializer.Serialize(snapshot, new JsonSerializerOptions { WriteIndented = true });
 
