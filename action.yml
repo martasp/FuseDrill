@@ -1,0 +1,20 @@
+name: FuseDrill"
+description: "Automatic fuzzing|simulation testing for open apis"
+author: Martynas Pocius
+branding:
+  icon: "zap"
+  color: "green"
+
+inputs:
+  fuseDrillBaseAddres:
+    description: 'Base address of the FuseDrill API'
+    required: true
+    type: string
+  fuseDrillOpenApiUrl:
+    description: 'OpenAPI URL for FuseDrill'
+    required: true
+    type: string
+  fuseDrillTestAccountOAuthHeaderValue:
+    description: 'OAuth header value for test account'
+    required: true
+    type: string
