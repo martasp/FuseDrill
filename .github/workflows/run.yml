@@ -21,6 +21,34 @@ on:
 permissions:
   contents: write # Enables both read and write access to repository content
 
+# jobs:
+#   fuseDrill-test:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
+
+#       - name: Download FuseDrill Release
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         run: |
+#           curl -L -H "Authorization: token $GITHUB_TOKEN" \
+#                -o FuseDrill \
+#                https://github.com/martasp/FuseDrill/releases/download/v1.0.7/FuseDrill
+
+#       - name: Run FuseDrill CLI
+#         env:
+#           # FUSEDRILL_BASE_ADDRESS: ${{ inputs.fuseDrillBaseAddres }}
+#           # FUSEDRILL_OPENAPI_URL: ${{ inputs.fuseDrillOpenApiUrl }}
+#           # FUSEDRILL_TEST_ACCOUNT_OAUTH_HEADER_VALUE: ${{ inputs.fuseDrillTestAccountOAuthHeaderValue }}
+#           FUSEDRILL_BASE_ADDRESS: "https://api.apis.guru/v2"
+#           FUSEDRILL_OPENAPI_URL: "https://api.apis.guru/v2/openapi.yaml"
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         run: |
+#           chmod +x FuseDrill
+#           ./FuseDrill
+
 jobs:
   fuseDrill-test:
     runs-on: ubuntu-latest
@@ -29,15 +57,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Download FuseDrill Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          curl -L -H "Authorization: token $GITHUB_TOKEN" \
-               -o FuseDrill \
-               https://github.com/martasp/FuseDrill/releases/download/v1.0.7/FuseDrill
+      - name: Log in to GitHub Container Registry
+        run: echo ${{ secrets.PERSONAL_ACCESS_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
-      - name: Run FuseDrill CLI
+      - name: Pull FuseDrill Docker Image
+        run: docker pull ghcr.io/martasp/fusedrill:latest
+
+      - name: Run FuseDrill CLI in Docker
         env:
           # FUSEDRILL_BASE_ADDRESS: ${{ inputs.fuseDrillBaseAddres }}
           # FUSEDRILL_OPENAPI_URL: ${{ inputs.fuseDrillOpenApiUrl }}
@@ -46,7 +72,10 @@ jobs:
           FUSEDRILL_OPENAPI_URL: "https://api.apis.guru/v2/openapi.yaml"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          chmod +x FuseDrill
-          ./FuseDrill
+          docker run --rm \
+            -e FUSEDRILL_BASE_ADDRESS=$FUSEDRILL_BASE_ADDRESS \
+            -e FUSEDRILL_OPENAPI_URL=$FUSEDRILL_OPENAPI_URL \
+            -e GITHUB_TOKEN=$GITHUB_TOKEN \
+            ghcr.io/martasp/fusedrill:latest
 
           
