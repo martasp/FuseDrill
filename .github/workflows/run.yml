@@ -1,0 +1,46 @@
+name: "FuseDrill Testing Workflow"
+# description: "Automatic fuzzing/simulation testing for OpenAPIs using FuseDrill"
+
+on:
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+# inputs:
+#   fuseDrillBaseAddres:
+#     description: "Base address of the FuseDrill API"
+#     required: true
+#     type: string
+#   fuseDrillOpenApiUrl:
+#     description: "OpenAPI URL for FuseDrill"
+#     required: true
+#     type: string
+#   fuseDrillTestAccountOAuthHeaderValue:
+#     description: "OAuth header value for test account"
+#     required: false
+#     type: string
+
+permissions:
+  contents: write # Enables both read and write access to repository content
+
+jobs:
+  fuseDrill-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download FuseDrill Release
+        run: |
+          curl -L -o FuseDrill https://github.com/FuseDrill/releases/latest/download/FuseDrill
+
+      - name: Run FuseDrill CLI
+        env:
+          # FUSEDRILL_BASE_ADDRESS: ${{ inputs.fuseDrillBaseAddres }}
+          # FUSEDRILL_OPENAPI_URL: ${{ inputs.fuseDrillOpenApiUrl }}
+          # FUSEDRILL_TEST_ACCOUNT_OAUTH_HEADER_VALUE: ${{ inputs.fuseDrillTestAccountOAuthHeaderValue }}
+          FUSEDRILL_BASE_ADDRESS: "https://api.apis.guru/v2"
+          FUSEDRILL_OPENAPI_URL: "https://api.apis.guru/v2/openapi.yaml"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          chmod +x FuseDrill/FuseDrill
+          ./FuseDrill/FuseDrill
