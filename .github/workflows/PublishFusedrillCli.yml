@@ -32,7 +32,7 @@ jobs:
       run: ls -la ./publish
 
     - name: Rename Executable
-      run: mv ./publish/FuseDrill.Cli ./FuseDrill
+      run: mv ./publish/FuseDrill.Cli ./FuseDrill  # Rename to FuseDrill
 
     - name: Upload Executable to GitHub Release
       uses: actions/upload-release-asset@v1
@@ -46,10 +46,12 @@ jobs:
 
     - name: Build Docker Image (scratch)
       run: |
+        # Build Dockerfile
         echo "FROM scratch" > Dockerfile
-        echo "COPY FuseDrill /FuseDrill" >> Dockerfile
-        echo "ENTRYPOINT [\"/FuseDrill\"]" >> Dockerfile
-        echo "CMD []" >> Dockerfile
+        echo "COPY FuseDrill /FuseDrill" >> Dockerfile  # Copy FuseDrill to the root of the container
+        echo "RUN chmod +x /FuseDrill" >> Dockerfile  # Ensure it is executable
+        echo "ENTRYPOINT [\"/FuseDrill\"]" >> Dockerfile  # Set entrypoint to the executable
+        echo "CMD []" >> Dockerfile  # No default arguments
         docker build -t ghcr.io/${{ github.repository_owner }}/fusedrill:latest .
 
     - name: Log in to GitHub Container Registry
@@ -58,25 +60,23 @@ jobs:
     - name: Push Docker Image to GHCR
       run: docker push ghcr.io/${{ github.repository_owner }}/fusedrill:latest
 
-    # Test it by running 
     - name: Log in to GitHub Container Registry
       run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-                      
+
     - name: Pull FuseDrill Docker Image
-      run: docker pull ghcr.io/martasp/fusedrill:latest
-                            
+      run: docker pull ghcr.io/${{ github.repository_owner }}/fusedrill:latest
+
     - name: Run FuseDrill CLI in Docker
-      env: 
+      env:
         FUSEDRILL_BASE_ADDRESS: "https://api.apis.guru/v2"
         FUSEDRILL_OPENAPI_URL: "https://api.apis.guru/v2/openapi.yaml"
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # FUSEDRILL_BASE_ADDRESS: ${{ inputs.fuseDrillBaseAddres }}
         # FUSEDRILL_OPENAPI_URL: ${{ inputs.fuseDrillOpenApiUrl }}
         # FUSEDRILL_TEST_ACCOUNT_OAUTH_HEADER_VALUE: ${{ inputs.fuseDrillTestAccountOAuthHeaderValue }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         docker run --rm \
           -e FUSEDRILL_BASE_ADDRESS=$FUSEDRILL_BASE_ADDRESS \
           -e FUSEDRILL_OPENAPI_URL=$FUSEDRILL_OPENAPI_URL \
           -e GITHUB_TOKEN=$GITHUB_TOKEN \
           ghcr.io/martasp/fusedrill:latest
-
