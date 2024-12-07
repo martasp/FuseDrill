@@ -31,7 +31,7 @@ jobs:
 
       - name: Download FuseDrill Release
         run: |
-          curl -L -o FuseDrill https://github.com/FuseDrill/releases/latest/download/FuseDrill
+          curl -L -o FuseDrill https://github.com/martasp/FuseDrill/releases/download/v1.0.7/FuseDrill
 
       - name: Run FuseDrill CLI
         env:
