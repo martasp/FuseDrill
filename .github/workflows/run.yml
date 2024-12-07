@@ -42,5 +42,7 @@ jobs:
           FUSEDRILL_OPENAPI_URL: "https://api.apis.guru/v2/openapi.yaml"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          chmod +x FuseDrill/FuseDrill
-          ./FuseDrill/FuseDrill
+          chmod +x FuseDrill
+          ./FuseDrill
+
+          
