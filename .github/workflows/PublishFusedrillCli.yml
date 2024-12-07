@@ -49,7 +49,6 @@ jobs:
         # Build Dockerfile
         echo "FROM scratch" > Dockerfile
         echo "COPY FuseDrill /FuseDrill" >> Dockerfile  # Copy FuseDrill to the root of the container
-        echo "RUN chmod +x /FuseDrill" >> Dockerfile  # Ensure it is executable
         echo "ENTRYPOINT [\"/FuseDrill\"]" >> Dockerfile  # Set entrypoint to the executable
         echo "CMD []" >> Dockerfile  # No default arguments
         docker build -t ghcr.io/${{ github.repository_owner }}/fusedrill:latest .
