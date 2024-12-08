@@ -31,8 +31,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\FuseDrill\FuseDrill.csproj" />
-    <ProjectReference Include="..\..\src\fuzzer\FuseDrill.Core.csproj" />
+    <ProjectReference Include="..\..\src\FuseDrill.Core\FuseDrill.Core.csproj" />
+    <ProjectReference Include="..\..\src\FuseDrill\FuseDrill.csproj" />
     <ProjectReference Include="..\TestApi\TestApi.csproj" />
   </ItemGroup>
 

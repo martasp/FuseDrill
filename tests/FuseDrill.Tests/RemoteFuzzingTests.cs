@@ -1,7 +1,8 @@
+using FuseDrill;
+using FuseDrill.Core;
 using NSwag;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using tests.Fuzzer;
 namespace tests;
 
 // Define a test collection

@@ -6,12 +6,13 @@ using NJsonSchema.CodeGeneration;
 using NSwag;
 using NSwag.CodeGeneration.CSharp;
 using NSwag.CodeGeneration.OperationNameGenerators;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.Reflection;
 using System.Text.RegularExpressions;
-using static tests.Fuzzer.DataGenerationHelper;
+using static FuseDrill.Core.DataGenerationHelper;
 
-namespace tests.Fuzzer;
+namespace FuseDrill.Core;
 
 public class ApiFuzzer : IApiFuzzer
 {
@@ -139,7 +140,7 @@ public class ApiFuzzer : IApiFuzzer
             // Extract the status code, message, and type name from the response
             var simplifiedException = new
             {
-                StatusCode = ((dynamic)api?.Response)?.StatusCode,
+                ((dynamic)api?.Response)?.StatusCode,
                 Message = scrubedAndFixedMessage,
                 TypeName = api?.Response?.GetType()?.Name,
                 //InnerException = ((dynamic)api?.Response)?.InnerException?.Message,
@@ -241,7 +242,7 @@ public class ApiFuzzer : IApiFuzzer
             ExposeJsonSerializerSettings = true,
             UseBaseUrl = true,
             OperationNameGenerator = new CustomOperationNameGenerator(),
-            AdditionalNamespaceUsages = new[] { "Fuzzer" },
+            AdditionalNamespaceUsages = new[] { "FuseDrill.Core" },
             CSharpGeneratorSettings =
             {
 
@@ -267,11 +268,11 @@ public class ApiFuzzer : IApiFuzzer
         var generator = new CSharpClientGenerator(document, settings);
         var generatedCode = generator.GenerateFile();
 
-        var cleanFile = String.Join(Environment.NewLine, ToLines(generatedCode))
+        var cleanFile = string.Join(Environment.NewLine, ToLines(generatedCode))
             // Removes AdditionalProperties property from types as they are required to derive from IDictionary<string, object> for deserialization to work properly
-            .Replace($"        private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;", String.Empty)
-            .Replace($"        private System.Collections.Generic.IDictionary<string, object> _additionalProperties;", String.Empty)
-            .Replace($"        [Newtonsoft.Json.JsonExtensionData]{Environment.NewLine}        public System.Collections.Generic.IDictionary<string, object> AdditionalProperties{Environment.NewLine}        {{{Environment.NewLine}            get {{ return _additionalProperties ?? (_additionalProperties = new System.Collections.Generic.Dictionary<string, object>()); }}{Environment.NewLine}            set {{ _additionalProperties = value; }}{Environment.NewLine}        }}{Environment.NewLine}", String.Empty)
+            .Replace($"        private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;", string.Empty)
+            .Replace($"        private System.Collections.Generic.IDictionary<string, object> _additionalProperties;", string.Empty)
+            .Replace($"        [Newtonsoft.Json.JsonExtensionData]{Environment.NewLine}        public System.Collections.Generic.IDictionary<string, object> AdditionalProperties{Environment.NewLine}        {{{Environment.NewLine}            get {{ return _additionalProperties ?? (_additionalProperties = new System.Collections.Generic.Dictionary<string, object>()); }}{Environment.NewLine}            set {{ _additionalProperties = value; }}{Environment.NewLine}        }}{Environment.NewLine}", string.Empty)
             // Fixes stray blank lines from the C# generator
             .Replace($"{Environment.NewLine}{Environment.NewLine}{Environment.NewLine}", Environment.NewLine)
             .Replace($"{Environment.NewLine}{Environment.NewLine}    }}", $"{Environment.NewLine}    }}")
@@ -289,7 +290,7 @@ public class ApiFuzzer : IApiFuzzer
             .Cast<MetadataReference>()
             .ToList();
 
-        var aditionalReferences = MetadataReference.CreateFromFile(typeof(System.ComponentModel.DataAnnotations.AllowedValuesAttribute).Assembly.Location);
+        var aditionalReferences = MetadataReference.CreateFromFile(typeof(AllowedValuesAttribute).Assembly.Location);
 
         references.Add(aditionalReferences);
 
@@ -362,7 +363,7 @@ public class ApiFuzzer : IApiFuzzer
         string? line;
         while ((line = sr.ReadLine()) != null)
         {
-            if (removeEmptyLines && String.IsNullOrWhiteSpace(line))
+            if (removeEmptyLines && string.IsNullOrWhiteSpace(line))
                 continue;
             yield return line;
         }

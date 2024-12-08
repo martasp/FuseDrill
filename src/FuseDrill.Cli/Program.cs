@@ -1,6 +1,6 @@
-﻿using Octokit;
+﻿using FuseDrill.Core;
+using Octokit;
 using System.Text.Json;
-using tests.Fuzzer;
 
 
 //Run printenv

@@ -1,6 +1,7 @@
+using FuseDrill.Core;
 using Microsoft.AspNetCore.Mvc.Testing;
 
-namespace tests.Fuzzer;
+namespace FuseDrill;
 
 public class ApiFuzzer<TEntryPoint> : IApiFuzzer where TEntryPoint : class
 {

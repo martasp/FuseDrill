@@ -1,5 +1,6 @@
+using FuseDrill;
 using GeneratedClientMyNamespace1;
-using tests.Fuzzer;
+
 namespace tests;
 
 // Define a test collection

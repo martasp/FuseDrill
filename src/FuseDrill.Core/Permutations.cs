@@ -1,4 +1,4 @@
-namespace tests.Fuzzer
+namespace FuseDrill.Core
 {
     public static class PermutationGenerator
     {
