@@ -242,7 +242,7 @@ public class ApiFuzzer : IApiFuzzer
             ExposeJsonSerializerSettings = true,
             UseBaseUrl = true,
             OperationNameGenerator = new CustomOperationNameGenerator(),
-            AdditionalNamespaceUsages = new[] { "Fuzzer" },
+            AdditionalNamespaceUsages = new[] { "FuseDrill.Core" },
             CSharpGeneratorSettings =
             {
 
