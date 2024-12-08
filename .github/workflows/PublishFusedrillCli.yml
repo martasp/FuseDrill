@@ -29,19 +29,19 @@ jobs:
       run: dotnet publish /t:PublishContainer -c Release --runtime linux-x64
 
     - name: Tag image
-      run: docker tag fusedrill-cli:latest ghcr.io/martasp/FuseDrill/fuseDrill-cli:latest
+      run: docker tag fusedrill-cli:latest ghcr.io/martasp/fusedrill/fusedrill-cli:latest
 
     - name: Log in to GitHub Container Registry
       run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
     - name: Push Docker Image to GHCR
-      run: docker push ghcr.io/martasp/FuseDrill/fusedrill-cli:latest
+      run: docker push ghcr.io/martasp/fuseDrill/fusedrill-cli:latest
 
     - name: Remove local Docker image
       run: docker rmi fusedrill-cli:latest
 
     - name: Pull FuseDrill Docker Image
-      run: docker pull ghcr.io/martasp/FuseDrill/fusedrill-cli:latest
+      run: docker pull ghcr.io/martasp/fusedrill/fusedrill-cli:latest
 
     - name: Run FuseDrill CLI in Docker
       env:
@@ -56,7 +56,7 @@ jobs:
           -e FUSEDRILL_BASE_ADDRESS=$FUSEDRILL_BASE_ADDRESS \
           -e FUSEDRILL_OPENAPI_URL=$FUSEDRILL_OPENAPI_URL \
           -e GITHUB_TOKEN=$GITHUB_TOKEN \
-          ghcr.io/martasp/FuseDrill/fusedrill-cli:latest
+          ghcr.io/martasp/fusedrill/fusedrill-cli:latest
 
 
   # old way
