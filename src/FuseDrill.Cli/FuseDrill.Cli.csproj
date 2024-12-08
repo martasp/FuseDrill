@@ -5,6 +5,14 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+    <IsPublishable>true</IsPublishable>
+    <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
+    <!--<PublishTrimmed>true</PublishTrimmed>-->
+    <!--<ContainerFamaly>jammy-chiseled</ContainerFamaly>-->
+    <!--<ContainerBaseImage>mcr.microsoft.com/dotnet/aspnet:8.0</ContainerBaseImage>-->
+    <!--<ContainerBaseImage>mcr.microsoft.com/dotnet/runtime-deps:8.0</ContainerBaseImage>-->
+    <!--dotnet publish /t:PublishContainer-->
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\fuzzer\FuseDrill.Core.csproj" />
+    <!--Todo remove aspnet dependency from FuseDrill.Core-->
+    <ProjectReference Include="..\fuzzer\FuseDrill.Core.csproj" /> 
   </ItemGroup>
 </Project>
