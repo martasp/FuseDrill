@@ -48,15 +48,15 @@ jobs:
         FUSEDRILL_BASE_ADDRESS: "https://api.apis.guru/v2"
         FUSEDRILL_OPENAPI_URL: "https://api.apis.guru/v2/openapi.yaml"
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SMOKE_FLAG: "true"
+        GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+        GITHUB_REPOSITORY: ${{ github.repository }}
+        GITHUB_HEAD_REF: ${{ github.head_ref }}
         # FUSEDRILL_BASE_ADDRESS: ${{ inputs.fuseDrillBaseAddres }}
         # FUSEDRILL_OPENAPI_URL: ${{ inputs.fuseDrillOpenApiUrl }}
         # FUSEDRILL_TEST_ACCOUNT_OAUTH_HEADER_VALUE: ${{ inputs.fuseDrillTestAccountOAuthHeaderValue }}
       run: |
-        docker run --rm \
-          -e FUSEDRILL_BASE_ADDRESS=$FUSEDRILL_BASE_ADDRESS \
-          -e FUSEDRILL_OPENAPI_URL=$FUSEDRILL_OPENAPI_URL \
-          -e GITHUB_TOKEN=$GITHUB_TOKEN \
-          ghcr.io/martasp/fusedrill/fusedrill-cli:latest
+        docker run --rm ghcr.io/martasp/fusedrill/fusedrill-cli:latest
 
 
   # old way
