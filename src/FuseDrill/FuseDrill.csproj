@@ -16,8 +16,4 @@
     <ProjectReference Include="..\FuseDrill.Core\FuseDrill.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="NewFolder\" />
-  </ItemGroup>
-  
 </Project>
