@@ -1,4 +1,4 @@
-﻿namespace tests.Fuzzer;
+﻿namespace FuseDrill.Core;
 
 public class ApiCall
 {

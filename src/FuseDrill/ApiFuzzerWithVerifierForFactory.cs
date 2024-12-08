@@ -1,4 +1,6 @@
-namespace tests.Fuzzer;
+using FuseDrill.Core;
+
+namespace FuseDrill;
 
 public class ApiFuzzerWithVerifier<TEntryPoint> : IApiFuzzer where TEntryPoint : class
 {

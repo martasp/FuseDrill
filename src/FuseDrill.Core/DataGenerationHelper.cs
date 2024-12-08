@@ -1,13 +1,12 @@
-﻿using Fuzzer;
-using OneOf;
+﻿using OneOf;
 using System.Diagnostics;
 using System.Reflection;
 
-namespace tests.Fuzzer;
+namespace FuseDrill.Core;
 
 public class DataGenerationHelper
 {
-    public System.Random random { get; set; }
+    public Random random { get; set; }
     public int _seed { get; set; }
 
     public RecursionGuard recursionGuard { get; set; } = new RecursionGuard();
@@ -15,7 +14,7 @@ public class DataGenerationHelper
     public DataGenerationHelper(int seed)
     {
         _seed = seed;
-        random = new System.Random(seed);
+        random = new Random(seed);
     }
 
     public byte[] GetRandomBytes()
@@ -52,7 +51,7 @@ public class DataGenerationHelper
             || type == typeof(decimal) // Decimal is not considered a primitive by .NET, but should be handled
             || type == typeof(DateTime) // DateTime is also commonly treated as a simple type
             || type == typeof(Guid) // Include Guid as a simple type
-            || type == typeof(Int64) // Include Guid as a simple type
+            || type == typeof(long) // Include Guid as a simple type
             || type == typeof(DateTime) // Include Guid as a simple type
             || type == typeof(DateTimeOffset) // Include Guid as a simple type
             || type == typeof(long) // Include Guid as a simple type
@@ -61,7 +60,7 @@ public class DataGenerationHelper
             || type == typeof(decimal?) // Decimal is not considered a primitive by .NET, but should be handled
             || type == typeof(DateTime?) // DateTime is also commonly treated as a simple type
             || type == typeof(Guid?) // Include Guid as a simple type
-            || type == typeof(Int64?) // Include Guid as a simple type
+            || type == typeof(long?) // Include Guid as a simple type
             || type == typeof(DateTime?) // Include Guid as a simple type
             || type == typeof(DateTimeOffset?) // Include Guid as a simple type
             || type == typeof(long?); // Include Guid as a simple type
@@ -110,10 +109,10 @@ public class DataGenerationHelper
         random.NextBytes(guidBytes);
 
         // Set the version and variant fields of the GUID as per the specification
-        guidBytes[7] &= (byte)0x0F;  // Clear the top 4 bits of the 8th byte
-        guidBytes[7] |= (byte)0x40;  // Set version to 4 (random-based)
-        guidBytes[8] &= (byte)0x3F;  // Clear the top 2 bits of the 9th byte
-        guidBytes[8] |= (byte)0x80;  // Set variant to RFC4122
+        guidBytes[7] &= 0x0F;  // Clear the top 4 bits of the 8th byte
+        guidBytes[7] |= 0x40;  // Set version to 4 (random-based)
+        guidBytes[8] &= 0x3F;  // Clear the top 2 bits of the 9th byte
+        guidBytes[8] |= 0x80;  // Set variant to RFC4122
 
         // Create the GUID from the byte array
         return new Guid(guidBytes);
@@ -150,7 +149,7 @@ public class DataGenerationHelper
             Type t when t == typeof(DateTime) => DateTime.Now.AddDays(random.Next(-100, 100)),         // Random date
             Type t when t == typeof(DateTimeOffset) => DateTimeOffset.Now.AddDays(random.Next(-100, 100)),         // Random date
             Type t when t == typeof(Guid) => GenerateGuidFromSeed(),
-            Type t when t == typeof(Int64) => random.NextInt64(1, 10000),
+            Type t when t == typeof(long) => random.NextInt64(1, 10000),
             Type t when t == typeof(long) => random.NextInt64(1, 10000),
             Type t when t == typeof(float) => random.NextSingle(),
             Type t when t == typeof(double) => random.NextDouble(),
@@ -167,7 +166,7 @@ public class DataGenerationHelper
                 : "RandomString" + random.Next(1, 1000),  // Random string? (null or string)
 
             // Handle nullable types explicitly (e.g., int?, bool?, double?, DateTime?)
-            Type t when t == typeof(int?) => random.Next(0, 2) == 0 ? (int?)null : (int?)random.Next(1, permutationSizeCount),  // Random int? (null or int)
+            Type t when t == typeof(int?) => random.Next(0, 2) == 0 ? null : (int?)random.Next(1, permutationSizeCount),  // Random int? (null or int)
             Type t when t == typeof(bool?) => random.Next(0, 2) == 0 ? (bool?)null : random.Next(0, 2) == 0,               // Random bool? (null or bool)
             Type t when t == typeof(double?) => random.Next(0, 2) == 0 ? (double?)null : random.NextDouble() * 100,          // Random double? (null or double)
             Type t when t == typeof(DateTime?) => random.Next(0, 2) == 0 ? (DateTime?)null : DateTime.Now.AddDays(random.Next(-100, 100)), // Random DateTime? (null or DateTime)
@@ -176,8 +175,8 @@ public class DataGenerationHelper
             Type t when t == typeof(long?) => random.Next(0, 2) == 0 ? (long?)null : random.NextInt64(1, 10000),
             Type t when t == typeof(float?) => random.Next(0, 2) == 0 ? (float?)null : random.NextSingle(),
             Type t when t == typeof(double?) => random.Next(0, 2) == 0 ? (double?)null : random.NextDouble(),
-            Type t when t == typeof(decimal?) => random.Next(0, 2) == 0 ? (decimal?)null : random.NextDouble(),
-            Type t when t == typeof(byte[]) => random.Next(0, 2) == 0 ? (byte[]?)null : GetRandomBytes(),
+            Type t when t == typeof(decimal?) => random.Next(0, 2) == 0 ? null : random.NextDouble(),
+            Type t when t == typeof(byte[]) => random.Next(0, 2) == 0 ? null : GetRandomBytes(),
 
             //Mocking rest api files parameter
             Type t when t == typeof(FileParameter) =>
@@ -353,7 +352,7 @@ public class DataGenerationHelper
 
 
     // Helper method to get a random value from an enum type
-    private object GetRandomEnumValue(Type enumType, System.Random random)
+    private object GetRandomEnumValue(Type enumType, Random random)
     {
         var values = Enum.GetValues(enumType);
         var randomIndex = random.Next(values.Length);

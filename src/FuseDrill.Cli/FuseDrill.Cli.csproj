@@ -25,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FuseDrill.Core\FuseDrill.Core.csproj" />
     <ProjectReference Include="..\fuzzer\FuseDrill.Core.csproj" /> 
   </ItemGroup>
 </Project>

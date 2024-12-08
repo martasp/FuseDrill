@@ -1,4 +1,4 @@
-namespace Fuzzer;
+namespace FuseDrill.Core;
 
 public class FileParameter
 {

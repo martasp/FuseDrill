@@ -1,4 +1,6 @@
-using tests.Fuzzer;
+using FuseDrill;
+using FuseDrill.Core;
+
 namespace tests;
 
 [CollectionDefinition("Sequential Tests", DisableParallelization = true)]

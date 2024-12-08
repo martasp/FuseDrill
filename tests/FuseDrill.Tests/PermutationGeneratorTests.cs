@@ -1,4 +1,4 @@
-using tests.Fuzzer;
+using FuseDrill.Core;
 
 namespace ListPermutationExtension.Tests
 {

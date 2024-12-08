@@ -1,7 +1,7 @@
-﻿using System.Collections;
+﻿using FuseDrill.Core;
+using System.Collections;
 using System.Reflection;
 using System.Text;
-using tests.Fuzzer;
 
 public class FuzzerTests
 {

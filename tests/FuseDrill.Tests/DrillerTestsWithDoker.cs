@@ -1,5 +1,5 @@
 using DotNet.Testcontainers.Builders;
-using tests.Fuzzer;
+using FuseDrill;
 
 namespace tests;
 public class ApiIntegrationTests
