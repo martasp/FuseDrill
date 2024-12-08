@@ -16,15 +16,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ConsoleAppFramework" Version="5.2.1">
+    <!--Todo improve cli-->
+    <!--<PackageReference Include="ConsoleAppFramework" Version="5.2.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-    </PackageReference>
+    </PackageReference>-->
     <PackageReference Include="Octokit" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <!--Todo remove aspnet dependency from FuseDrill.Core-->
     <ProjectReference Include="..\fuzzer\FuseDrill.Core.csproj" /> 
   </ItemGroup>
 </Project>

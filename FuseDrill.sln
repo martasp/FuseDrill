@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tests", "tests\FuseDrill.Te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApi", "tests\TestApi\TestApi.csproj", "{94F95777-F330-4A08-BAC4-BA28623CAF1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuseDrill", "FuseDrill\FuseDrill.csproj", "{1C7F09C5-26CB-4130-BE28-E7F72BC83046}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{94F95777-F330-4A08-BAC4-BA28623CAF1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94F95777-F330-4A08-BAC4-BA28623CAF1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94F95777-F330-4A08-BAC4-BA28623CAF1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C7F09C5-26CB-4130-BE28-E7F72BC83046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C7F09C5-26CB-4130-BE28-E7F72BC83046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C7F09C5-26CB-4130-BE28-E7F72BC83046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C7F09C5-26CB-4130-BE28-E7F72BC83046}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
