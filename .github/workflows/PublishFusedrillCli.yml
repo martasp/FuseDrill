@@ -28,6 +28,9 @@ jobs:
     - name: Dotnet publish image
       run: dotnet publish /t:PublishContainer -c Release --runtime linux-x64
 
+    - name: Dotnet test
+      run: dotnet test
+
     - name: Tag image
       run: docker tag fusedrill-cli:latest ghcr.io/martasp/fusedrill/fusedrill-cli:latest
 
@@ -44,20 +47,16 @@ jobs:
       run: docker pull ghcr.io/martasp/fusedrill/fusedrill-cli:latest
 
     - name: Run FuseDrill CLI in Docker
-      env:
-        FUSEDRILL_BASE_ADDRESS: "https://api.apis.guru/v2"
-        FUSEDRILL_OPENAPI_URL: "https://api.apis.guru/v2/openapi.yaml"
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SMOKE_FLAG: "true"
-        GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
-        GITHUB_REPOSITORY: ${{ github.repository }}
-        GITHUB_HEAD_REF: ${{ github.head_ref }}
-        # FUSEDRILL_BASE_ADDRESS: ${{ inputs.fuseDrillBaseAddres }}
-        # FUSEDRILL_OPENAPI_URL: ${{ inputs.fuseDrillOpenApiUrl }}
-        # FUSEDRILL_TEST_ACCOUNT_OAUTH_HEADER_VALUE: ${{ inputs.fuseDrillTestAccountOAuthHeaderValue }}
       run: |
-        docker run --rm ghcr.io/martasp/fusedrill/fusedrill-cli:latest
-
+        docker run --rm \
+          -e FUSEDRILL_BASE_ADDRESS="https://api.apis.guru/v2" \
+          -e FUSEDRILL_OPENAPI_URL="https://api.apis.guru/v2/openapi.yaml" \
+          -e GITHUB_TOKEN="${{ secrets.GITHUB_TOKEN }}" \
+          -e SMOKE_FLAG="true" \
+          -e GITHUB_REPOSITORY_OWNER="${{ github.repository_owner }}" \
+          -e GITHUB_REPOSITORY="${{ github.repository }}" \
+          -e GITHUB_HEAD_REF="${{ github.head_ref }}" \
+          ghcr.io/martasp/fusedrill/fusedrill-cli:latest
 
   # old way
     # - name: Build Single-File Executable
