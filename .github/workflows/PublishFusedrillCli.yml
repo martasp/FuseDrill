@@ -26,44 +26,19 @@ jobs:
       run: dotnet restore
 
     - name: Build Single-File Executable
-      run: dotnet publish src/FuseDrill.Cli/FuseDrill.Cli.csproj -c Release -r linux-x64 --self-contained true -p:PublishSingleFile=true -o ./publish
-
-    - name: Verify Build Output
-      run: ls -la ./publish
-
-    - name: Rename Executable
-      run: mv ./publish/FuseDrill.Cli ./FuseDrill  # Rename to FuseDrill
-
-    - name: Upload Executable to GitHub Release
-      uses: actions/upload-release-asset@v1
-      with:
-        upload_url: ${{ github.event.release.upload_url }}
-        asset_path: ./FuseDrill
-        asset_name: FuseDrill
-        asset_content_type: application/octet-stream
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Build Docker Image (scratch)
-      run: |
-        # Build Dockerfile
-        echo "FROM scratch" > Dockerfile
-        echo "COPY FuseDrill /FuseDrill" >> Dockerfile  # Copy FuseDrill to the root of the container
-        echo "ENTRYPOINT [\"/FuseDrill\"]" >> Dockerfile  # Set entrypoint to the executable
-        echo "CMD []" >> Dockerfile  # No default arguments
-        docker build -t ghcr.io/${{ github.repository_owner }}/fusedrill:latest .
+      run: dotnet publish /t:PublishContainer -c Release --runtime linux-x64
 
     - name: Log in to GitHub Container Registry
       run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
     - name: Push Docker Image to GHCR
-      run: docker push ghcr.io/${{ github.repository_owner }}/fusedrill:latest
+      run: docker push ghcr.io/martasp/fusedrill-cli:latest
 
     - name: Log in to GitHub Container Registry
       run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
     - name: Pull FuseDrill Docker Image
-      run: docker pull ghcr.io/${{ github.repository_owner }}/fusedrill:latest
+      run: docker pull ghcr.io/martasp/fusedrill-cli:latest
 
     - name: Run FuseDrill CLI in Docker
       env:
@@ -78,4 +53,34 @@ jobs:
           -e FUSEDRILL_BASE_ADDRESS=$FUSEDRILL_BASE_ADDRESS \
           -e FUSEDRILL_OPENAPI_URL=$FUSEDRILL_OPENAPI_URL \
           -e GITHUB_TOKEN=$GITHUB_TOKEN \
-          ghcr.io/martasp/fusedrill:latest
+          ghcr.io/martasp/fusedrill-cli:latest
+
+
+  # old way
+    # - name: Build Single-File Executable
+    #   run: dotnet publish src/FuseDrill.Cli/FuseDrill.Cli.csproj -c Release -r linux-x64 --self-contained true -p:PublishSingleFile=true -o ./publish
+
+    # - name: Verify Build Output
+    #   run: ls -la ./publish
+
+    # - name: Rename Executable
+    #   run: mv ./publish/FuseDrill.Cli ./FuseDrill  # Rename to FuseDrill
+
+    # - name: Upload Executable to GitHub Release
+    #   uses: actions/upload-release-asset@v1
+    #   with:
+    #     upload_url: ${{ github.event.release.upload_url }}
+    #     asset_path: ./FuseDrill
+    #     asset_name: FuseDrill
+    #     asset_content_type: application/octet-stream
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    # - name: Build Docker Image (scratch)
+    #   run: |
+    #     # Build Dockerfile
+    #     echo "FROM scratch" > Dockerfile
+    #     echo "COPY FuseDrill /FuseDrill" >> Dockerfile  # Copy FuseDrill to the root of the container
+    #     echo "ENTRYPOINT [\"/FuseDrill\"]" >> Dockerfile  # Set entrypoint to the executable
+    #     echo "CMD []" >> Dockerfile  # No default arguments
+    #     docker build -t ghcr.io/${{ github.repository_owner }}/fusedrill:latest .
