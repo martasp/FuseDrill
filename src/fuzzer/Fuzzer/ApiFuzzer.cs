@@ -9,7 +9,6 @@ using NSwag.CodeGeneration.OperationNameGenerators;
 using System.Diagnostics;
 using System.Reflection;
 using System.Text.RegularExpressions;
-using System.ComponentModel.DataAnnotations;
 using static tests.Fuzzer.DataGenerationHelper;
 
 namespace tests.Fuzzer;

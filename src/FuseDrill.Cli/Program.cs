@@ -1,10 +1,5 @@
-﻿using System;
-using System.IO;
-using System.Net.Http;
-using System.Threading.Tasks;
+﻿using Octokit;
 using System.Text.Json;
-using Octokit;
-using Fuzzer;
 using tests.Fuzzer;
 
 

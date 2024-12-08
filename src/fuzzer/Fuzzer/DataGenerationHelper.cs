@@ -121,7 +121,7 @@ public class DataGenerationHelper
 
     public Uri CreateMockedUri()
     {
-       return new Uri(@$"https://{"RandomString" + random.Next(1, 1000)}.com");
+        return new Uri(@$"https://{"RandomString" + random.Next(1, 1000)}.com");
     }
 
     public Stream CreateMockedStream()
@@ -139,7 +139,7 @@ public class DataGenerationHelper
         }
 
 #pragma warning disable CS8603 // Possible null reference return., thats expected because of nullables
-       
+
         //Todo improve determistic behaviour
         var res = type switch
         {
