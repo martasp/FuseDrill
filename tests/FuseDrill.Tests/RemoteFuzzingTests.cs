@@ -1,7 +1,7 @@
-using tests.Fuzzer;
+using NSwag;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using NSwag;
+using tests.Fuzzer;
 namespace tests;
 
 // Define a test collection

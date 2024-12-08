@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace tests.Fuzzer;
+﻿namespace tests.Fuzzer;
 
 public interface IApiFuzzer
 {
