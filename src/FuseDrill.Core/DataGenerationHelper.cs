@@ -43,29 +43,6 @@ public class DataGenerationHelper
         return allRes;
     }
 
-    static bool isPrimitiveType(Type type)
-    {
-        // Check if the type is a primitive type, or a special type that is treated as a primitive type
-        return type.IsPrimitive // Checks for built-in primitive types like int, float, etc.
-            || type == typeof(string) // String is commonly treated as a "primitive"
-            || type == typeof(decimal) // Decimal is not considered a primitive by .NET, but should be handled
-            || type == typeof(DateTime) // DateTime is also commonly treated as a simple type
-            || type == typeof(Guid) // Include Guid as a simple type
-            || type == typeof(long) // Include Guid as a simple type
-            || type == typeof(DateTime) // Include Guid as a simple type
-            || type == typeof(DateTimeOffset) // Include Guid as a simple type
-            || type == typeof(long) // Include Guid as a simple type
-
-            //|| type == typeof(string?) // String is commonly treated as a "primitive" ????????????
-            || type == typeof(decimal?) // Decimal is not considered a primitive by .NET, but should be handled
-            || type == typeof(DateTime?) // DateTime is also commonly treated as a simple type
-            || type == typeof(Guid?) // Include Guid as a simple type
-            || type == typeof(long?) // Include Guid as a simple type
-            || type == typeof(DateTime?) // Include Guid as a simple type
-            || type == typeof(DateTimeOffset?) // Include Guid as a simple type
-            || type == typeof(long?); // Include Guid as a simple type
-    }
-
     private object CreateInstanceWithRandomValues(OneOf<Type, VoidEmptyType> methodtype, int permutationSizeCount)
     {
         var instance = methodtype.Match(type => createInstance(type, permutationSizeCount), voidType => null);
@@ -149,7 +126,6 @@ public class DataGenerationHelper
             Type t when t == typeof(DateTime) => DateTime.Now.AddDays(random.Next(-100, 100)),         // Random date
             Type t when t == typeof(DateTimeOffset) => DateTimeOffset.Now.AddDays(random.Next(-100, 100)),         // Random date
             Type t when t == typeof(Guid) => GenerateGuidFromSeed(),
-            Type t when t == typeof(long) => random.NextInt64(1, 10000),
             Type t when t == typeof(long) => random.NextInt64(1, 10000),
             Type t when t == typeof(float) => random.NextSingle(),
             Type t when t == typeof(double) => random.NextDouble(),
