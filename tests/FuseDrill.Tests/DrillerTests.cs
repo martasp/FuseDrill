@@ -19,7 +19,10 @@ public class DrillerTests
         await fuzzer.TestWholeApi();
     }
 
-    [Fact]
+
+#if DEBUG
+    [Fact(Skip = "Do not works in github actions")]// calling external api guru endpoint, good for debugging.
+#endif
     public async Task TestRemoteFuzzing()
     {
         // Search for "TestApi.csproj" starting from the current directory

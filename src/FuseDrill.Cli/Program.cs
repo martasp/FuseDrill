@@ -141,12 +141,8 @@ var token = envars["GITHUB_TOKEN"]?.ToString();
 var fuseDrillBaseAddres = (envars["FUSEDRILL_BASE_ADDRESS"] ?? throw new Exception("FUSEDRILL_BASE_ADDRESS not found in environment variables.")).ToString();
 var fuseDrillOpenApiUrl = (envars["FUSEDRILL_OPENAPI_URL"] ?? throw new Exception("FUSEDRILL_OPENAPI_URL not found in environment variables.")).ToString();
 var fuseDrillTestAccountOAuthHeaderValue = envars["FUSEDRILL_TEST_ACCOUNT_OAUTH_HEADER_VALUE"]?.ToString();
+var smokeFlag = envars["SMOKE_FLAG"]?.ToString() == "true";
 
-if (string.IsNullOrEmpty(branch))
-{
-    Console.WriteLine("Branch name not found in environment variables.");
-    return;
-}
 
 // API details
 //var baseAddress = "https://api.apis.guru/v2";
@@ -164,6 +160,17 @@ var tester = new ApiFuzzer(httpClient, fuseDrillOpenApiUrl);
 var snapshot = await tester.TestWholeApi();
 var snapshotString = JsonSerializer.Serialize(snapshot, new JsonSerializerOptions { WriteIndented = true });
 
+if (smokeFlag)
+{
+    Console.WriteLine(snapshotString);
+}
+
+if (string.IsNullOrEmpty(snapshotString))
+{
+    Console.WriteLine("API snapshot is empty.");
+    return;
+}
+
 // Save snapshot to a local file
 var fileName = $"api-snapshot.json";
 
@@ -177,6 +184,12 @@ github.Credentials = tokenAuth;
 if (string.IsNullOrEmpty(owner) || string.IsNullOrEmpty(repoName))
 {
     Console.WriteLine("Repository owner or name not found in environment variables.");
+    return;
+}
+
+if (string.IsNullOrEmpty(branch))
+{
+    Console.WriteLine("Branch name not found in environment variables.");
     return;
 }
 
