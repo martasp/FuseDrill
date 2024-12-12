@@ -25,9 +25,21 @@ jobs:
       - name: Pull FuseDrill test api Docker Image
         run: docker pull ghcr.io/martasp/fusedrill/testapi:latest
         
-      - name: Run Test api
-        run: docker run -d -e ASPNETCORE_ENVIRONMENT="Development" -p 8080:8080 ghcr.io/martasp/fusedrill/testapi:latest
-
+      - name: Run Test API
+        run: |
+          docker run -d \
+            -e ASPNETCORE_ENVIRONMENT="Development" \
+            -p 8080:8080 \
+            ghcr.io/martasp/fusedrill/testapi:latest
+          
+      - name: Wait for Test API to be Ready
+        run: |
+          # Wait for the API to start and be reachable on port 8080
+          until curl -s http://localhost:8080/swagger/v1/swagger.json; do
+            echo "Waiting for Test API to start..."
+            sleep 5
+          done
+          
       - name: Run FuseDrill CLI in Docker
         run: |
           docker run --rm \
