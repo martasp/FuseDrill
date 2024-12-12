@@ -42,7 +42,7 @@ jobs:
           
       - name: Run FuseDrill CLI in Docker
         run: |
-           docker run --network host --rm -p 8080:8080 \
+           docker run --network host --rm \
             -e FUSEDRILL_BASE_ADDRESS="http://localhost:8080/" \
             -e FUSEDRILL_OPENAPI_URL="http://localhost:8080/swagger/v1/swagger.json" \
             -e GITHUB_TOKEN="${{ secrets.GITHUB_TOKEN }}" \
