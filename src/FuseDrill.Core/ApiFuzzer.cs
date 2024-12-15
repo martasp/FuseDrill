@@ -87,11 +87,11 @@ public class ApiFuzzer : IApiFuzzer
             // apply filter on api calls data
             if (filter != null)
             {
-                testSuite.ApiCalls = testSuite.ApiCalls.Where(filter).OrderBy(item => item.Order).ToList();
+                testSuite.ApiCalls = testSuite.ApiCalls.Where(filter).ToList();
             }
             else
             {
-                testSuite.ApiCalls = testSuite.ApiCalls.OrderBy(item => item.Order).ToList();
+                testSuite.ApiCalls = testSuite.ApiCalls.ToList();
             }
 
             if (_callEndpoints)
@@ -114,6 +114,9 @@ public class ApiFuzzer : IApiFuzzer
             testSuitesProcessed.Add(testSuite);
 
         }
+
+        //order api calls
+        testSuitesProcessed.ForEach(suite => { suite.ApiCalls = suite.ApiCalls.OrderBy(item => item.Order).ThenBy(item=>item.MethodName).ToList(); });
 
         var tests = new FuzzerTests();
         tests.TestSuites = testSuitesProcessed;
