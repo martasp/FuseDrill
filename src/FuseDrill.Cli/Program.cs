@@ -1,7 +1,10 @@
-﻿using FuseDrill.Core;
+﻿using DiffPlex;
+using FuseDrill.Core;
+using Microsoft.SemanticKernel.Connectors.OpenAI;
 using Octokit;
+using System.Net.Http;
 using System.Text.Json;
-
+using static HelperFunctions;
 
 //Run printenv
 //SELENIUM_JAR_PATH=/usr/share/java/selenium-server.jar
@@ -132,100 +135,23 @@ var envars = Environment.GetEnvironmentVariables();
 var owner = envars["GITHUB_REPOSITORY_OWNER"]?.ToString(); // e.g., "owner"
 var repoName = envars["GITHUB_REPOSITORY"]?.ToString()?.Split('/')?[1]; // e.g., "repo-name"
 var branch = envars["GITHUB_HEAD_REF"]?.ToString(); // e.g., "refs/heads/branch-name"
-var token = envars["GITHUB_TOKEN"]?.ToString();
+var githubToken = envars["GITHUB_TOKEN"]?.ToString();
 var fuseDrillBaseAddres = (envars["FUSEDRILL_BASE_ADDRESS"] ?? throw new Exception("FUSEDRILL_BASE_ADDRESS not found in environment variables.")).ToString();
 var fuseDrillOpenApiUrl = (envars["FUSEDRILL_OPENAPI_URL"] ?? throw new Exception("FUSEDRILL_OPENAPI_URL not found in environment variables.")).ToString();
 var fuseDrillTestAccountOAuthHeaderValue = envars["FUSEDRILL_TEST_ACCOUNT_OAUTH_HEADER_VALUE"]?.ToString();
 var smokeFlag = envars["SMOKE_FLAG"]?.ToString() == "true";
 
 
-// API details
-//var baseAddress = "https://api.apis.guru/v2";
-//var openApiUrl = "https://api.apis.guru/v2/openapi.yaml";
+#if DEBUG
+// just dotnet run in D:\main\FuseDrill\tests\TestApi\TestApi.csproj
+//"http://localhost:5184/swagger/v1/swagger.json"
+fuseDrillBaseAddres = "http://localhost:5184/";
+fuseDrillOpenApiUrl = "http://localhost:5184/swagger/v1/swagger.json";
+githubToken = Environment.GetEnvironmentVariable("GITHUB_TOKEN");
+branch = "test2";
+repoName = "FuseDrill";
+owner = "martasp";
+#endif
 
-// Fuzz testing the API
-var httpClient = new HttpClient
-{
-    BaseAddress = new Uri(fuseDrillBaseAddres),
-};
 
-httpClient.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", fuseDrillTestAccountOAuthHeaderValue);
-
-var tester = new ApiFuzzer(httpClient, fuseDrillOpenApiUrl);
-var snapshot = await tester.TestWholeApi();
-var snapshotString = JsonSerializer.Serialize(snapshot, new JsonSerializerOptions { WriteIndented = true });
-
-if (smokeFlag)
-{
-    Console.WriteLine(snapshotString);
-}
-
-if (string.IsNullOrEmpty(snapshotString))
-{
-    Console.WriteLine("API snapshot is empty.");
-    return;
-}
-
-// Save snapshot to a local file
-var fileName = $"api-snapshot.json";
-
-// GitHub client setup
-var github = new GitHubClient(new ProductHeaderValue("FuseDrill"));
-
-// Authenticate GitHub client using a token (replace with your token)
-var tokenAuth = new Credentials(token);
-github.Credentials = tokenAuth;
-
-if (string.IsNullOrEmpty(owner) || string.IsNullOrEmpty(repoName))
-{
-    Console.WriteLine("Repository owner or name not found in environment variables.");
-    return;
-}
-
-if (string.IsNullOrEmpty(branch))
-{
-    Console.WriteLine("Branch name not found in environment variables.");
-    return;
-}
-
-// Read the branch reference
-var branchRef = $"refs/heads/{branch}";
-
-// Get the reference for the branch
-var reference = await github.Git.Reference.Get(owner, repoName, branchRef);
-
-// Create a blob for the snapshot file
-var blob = new NewBlob
-{
-    Content = snapshotString,
-    Encoding = EncodingType.Utf8
-};
-
-var blobResult = await github.Git.Blob.Create(owner, repoName, blob);
-
-// Create a tree with the new blob
-var newTree = new NewTree
-{
-    BaseTree = reference.Object.Sha
-};
-
-newTree.Tree.Add(new NewTreeItem
-{
-    Path = fileName,
-    Mode = "100644",
-    Type = TreeType.Blob,
-    Sha = blobResult.Sha
-});
-
-var treeResult = await github.Git.Tree.Create(owner, repoName, newTree);
-
-// Create a new commit
-var newCommit = new NewCommit("Add API snapshot JSON", treeResult.Sha, reference.Object.Sha);
-
-var commitResult = await github.Git.Commit.Create(owner, repoName, newCommit);
-
-// Update the reference to point to the new commit
-await github.Git.Reference.Update(owner, repoName, branchRef, new ReferenceUpdate(commitResult.Sha));
-
-Console.WriteLine($"Snapshot committed to branch {branch} in repository {owner}/{repoName}");
-
+await CliFlow(owner, repoName, branch, githubToken, fuseDrillBaseAddres, fuseDrillOpenApiUrl, fuseDrillTestAccountOAuthHeaderValue, smokeFlag);
