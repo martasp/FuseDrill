@@ -68,6 +68,7 @@ jobs:
           -e GITHUB_REPOSITORY_OWNER="${{ github.repository_owner }}" \
           -e GITHUB_REPOSITORY="${{ github.repository }}" \
           -e GITHUB_HEAD_REF="${{ github.head_ref }}" \
+          -e GEMINI_API_KEY="${{ secrets.GEMINI_API_KEY }}" \
           ghcr.io/martasp/fusedrill/fusedrill-cli:latest
 
   # old way

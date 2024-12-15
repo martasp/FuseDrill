@@ -6,8 +6,8 @@ using DotNet.Testcontainers.Builders;
 
 public class CliFlowTests
 {
-    //[Fact(Skip = "Test Uses LLM, only good for testing cli as a github environment")]
-    [Fact]
+    [Fact(Skip = "Test uses LLM, only good for testing cli as a github environment")]
+    //[Fact]
     public async Task CompareFuzzingsWithLLMTest()
     {
         var envars = Environment.GetEnvironmentVariables();
@@ -32,7 +32,7 @@ public class CliFlowTests
 
         #if DEBUG
                 githubToken = Environment.GetEnvironmentVariable("GITHUB_TOKEN");
-                branch = "test2";
+                branch = "feedToAiDiff";
                 repoName = "FuseDrill";
                 owner = "martasp";
         #endif
