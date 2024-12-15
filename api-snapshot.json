@@ -9,7 +9,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:02.6453803+02:00",
+              "Date": "2024-12-15T20:00:39.4306715+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -79,7 +79,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:02.840274+02:00",
+              "Date": "2024-12-15T20:00:39.5405108+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -149,7 +149,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:02.9017078+02:00",
+              "Date": "2024-12-15T20:00:39.5454493+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -219,7 +219,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:02.9601561+02:00",
+              "Date": "2024-12-15T20:00:39.5492455+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -289,7 +289,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:03.0209895+02:00",
+              "Date": "2024-12-15T20:00:39.5526893+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -359,7 +359,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:03.0849191+02:00",
+              "Date": "2024-12-15T20:00:39.5562598+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -429,7 +429,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:03.1457825+02:00",
+              "Date": "2024-12-15T20:00:39.5596371+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -499,7 +499,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:03.2329868+02:00",
+              "Date": "2024-12-15T20:00:39.5635641+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -569,7 +569,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:03.2903111+02:00",
+              "Date": "2024-12-15T20:00:39.5673207+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -639,7 +639,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:03.3485968+02:00",
+              "Date": "2024-12-15T20:00:39.5741607+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -709,7 +709,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:03.4388342+02:00",
+              "Date": "2024-12-15T20:00:39.5780224+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -779,7 +779,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:03.5157705+02:00",
+              "Date": "2024-12-15T20:00:39.5816737+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -849,7 +849,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:03.5772923+02:00",
+              "Date": "2024-12-15T20:00:39.5851034+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -919,7 +919,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:03.6401016+02:00",
+              "Date": "2024-12-15T20:00:39.5885338+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -989,7 +989,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:03.7709267+02:00",
+              "Date": "2024-12-15T20:00:39.5929466+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -1059,7 +1059,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:03.8372354+02:00",
+              "Date": "2024-12-15T20:00:39.5966361+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -1129,7 +1129,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:03.8934074+02:00",
+              "Date": "2024-12-15T20:00:39.5999615+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -1199,7 +1199,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:03.9441778+02:00",
+              "Date": "2024-12-15T20:00:39.6032048+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -1269,7 +1269,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:04.0004729+02:00",
+              "Date": "2024-12-15T20:00:39.6064426+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -1339,7 +1339,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:04.0602359+02:00",
+              "Date": "2024-12-15T20:00:39.6097225+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -1409,7 +1409,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:04.1194976+02:00",
+              "Date": "2024-12-15T20:00:39.6159438+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -1479,7 +1479,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:04.1775814+02:00",
+              "Date": "2024-12-15T20:00:39.6193905+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -1549,7 +1549,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:04.2340914+02:00",
+              "Date": "2024-12-15T20:00:39.6234738+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -1619,7 +1619,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:04.290957+02:00",
+              "Date": "2024-12-15T20:00:39.6276869+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -1696,7 +1696,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:04.3487312+02:00",
+              "Date": "2024-12-15T20:00:39.6319728+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -1766,7 +1766,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:04.4052442+02:00",
+              "Date": "2024-12-15T20:00:39.636198+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -1836,7 +1836,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:04.4649298+02:00",
+              "Date": "2024-12-15T20:00:39.639832+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -1906,7 +1906,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:04.5206114+02:00",
+              "Date": "2024-12-15T20:00:39.6435532+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -1976,7 +1976,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:04.5789152+02:00",
+              "Date": "2024-12-15T20:00:39.6472993+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -2046,7 +2046,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:04.637851+02:00",
+              "Date": "2024-12-15T20:00:39.6509362+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -2120,7 +2120,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:04.7231661+02:00",
+              "Date": "2024-12-15T20:00:39.6548218+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -2190,7 +2190,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:04.7799642+02:00",
+              "Date": "2024-12-15T20:00:39.6585682+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -2266,7 +2266,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:04.8129131+02:00",
+              "Date": "2024-12-15T20:00:39.6622597+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -2335,7 +2335,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:04.9076452+02:00",
+              "Date": "2024-12-15T20:00:39.6660442+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -2405,7 +2405,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:04.9734609+02:00",
+              "Date": "2024-12-15T20:00:39.6694485+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -2476,7 +2476,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:04.9998606+02:00",
+              "Date": "2024-12-15T20:00:39.6725532+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -2546,7 +2546,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:05.0581822+02:00",
+              "Date": "2024-12-15T20:00:39.6757967+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -2615,7 +2615,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:05.1404885+02:00",
+              "Date": "2024-12-15T20:00:39.6795433+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -2680,7 +2680,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:05.1960668+02:00",
+              "Date": "2024-12-15T20:00:39.6833242+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -2750,7 +2750,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:05.2489384+02:00",
+              "Date": "2024-12-15T20:00:39.6866339+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -2826,7 +2826,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:05.2801049+02:00",
+              "Date": "2024-12-15T20:00:39.6899768+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -2895,7 +2895,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:05.3562722+02:00",
+              "Date": "2024-12-15T20:00:39.6933838+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -2965,7 +2965,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:05.4171557+02:00",
+              "Date": "2024-12-15T20:00:39.6969586+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -3036,7 +3036,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:05.4482035+02:00",
+              "Date": "2024-12-15T20:00:39.7003084+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -3105,7 +3105,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:05.5405906+02:00",
+              "Date": "2024-12-15T20:00:39.7037168+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -3176,7 +3176,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:05.5807543+02:00",
+              "Date": "2024-12-15T20:00:39.7072877+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -3240,7 +3240,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:05.6739361+02:00",
+              "Date": "2024-12-15T20:00:39.7108737+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -3310,7 +3310,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:05.7313837+02:00",
+              "Date": "2024-12-15T20:00:39.7146688+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -3387,7 +3387,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:05.7921652+02:00",
+              "Date": "2024-12-15T20:00:39.7230692+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -3457,7 +3457,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:05.858468+02:00",
+              "Date": "2024-12-15T20:00:39.7296927+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -3533,7 +3533,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:05.8923278+02:00",
+              "Date": "2024-12-15T20:00:39.73604+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -3602,7 +3602,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:05.9799854+02:00",
+              "Date": "2024-12-15T20:00:39.7431661+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -3672,7 +3672,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:06.0384411+02:00",
+              "Date": "2024-12-15T20:00:39.7497698+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -3743,7 +3743,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:06.0686483+02:00",
+              "Date": "2024-12-15T20:00:39.7566186+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -3807,7 +3807,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:06.1476042+02:00",
+              "Date": "2024-12-15T20:00:39.7619285+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -3877,7 +3877,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:06.2314316+02:00",
+              "Date": "2024-12-15T20:00:39.7660151+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -3953,7 +3953,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:06.2647875+02:00",
+              "Date": "2024-12-15T20:00:39.7696121+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -4022,7 +4022,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:06.3449958+02:00",
+              "Date": "2024-12-15T20:00:39.7729832+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -4092,7 +4092,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:06.4015407+02:00",
+              "Date": "2024-12-15T20:00:39.7767047+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -4163,7 +4163,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:06.4311001+02:00",
+              "Date": "2024-12-15T20:00:39.7803037+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -4237,7 +4237,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:06.5139176+02:00",
+              "Date": "2024-12-15T20:00:39.7862319+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -4306,7 +4306,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:06.5887916+02:00",
+              "Date": "2024-12-15T20:00:39.7903329+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -4377,7 +4377,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:06.6187598+02:00",
+              "Date": "2024-12-15T20:00:39.7945435+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -4446,7 +4446,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:06.7017153+02:00",
+              "Date": "2024-12-15T20:00:39.7982349+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -4522,7 +4522,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:06.7339818+02:00",
+              "Date": "2024-12-15T20:00:39.802147+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -4592,7 +4592,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:06.7841647+02:00",
+              "Date": "2024-12-15T20:00:39.8062291+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -4656,7 +4656,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:06.8615242+02:00",
+              "Date": "2024-12-15T20:00:39.8100474+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -4727,7 +4727,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:06.8920802+02:00",
+              "Date": "2024-12-15T20:00:39.8132596+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -4802,7 +4802,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:06.935147+02:00",
+              "Date": "2024-12-15T20:00:39.8168346+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -4872,7 +4872,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:06.9923357+02:00",
+              "Date": "2024-12-15T20:00:39.8201593+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -4936,7 +4936,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:07.0664754+02:00",
+              "Date": "2024-12-15T20:00:39.8238059+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -5007,7 +5007,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:07.0917575+02:00",
+              "Date": "2024-12-15T20:00:39.8272093+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -5084,7 +5084,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:07.1522782+02:00",
+              "Date": "2024-12-15T20:00:39.8316286+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -5153,7 +5153,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:07.2349214+02:00",
+              "Date": "2024-12-15T20:00:39.8350046+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -5224,7 +5224,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:07.2586448+02:00",
+              "Date": "2024-12-15T20:00:39.8384913+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -5293,7 +5293,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:07.3388032+02:00",
+              "Date": "2024-12-15T20:00:39.8421893+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -5369,7 +5369,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:07.3698423+02:00",
+              "Date": "2024-12-15T20:00:39.845423+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -5439,7 +5439,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:07.4202761+02:00",
+              "Date": "2024-12-15T20:00:39.8493244+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -5504,7 +5504,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:07.4772745+02:00",
+              "Date": "2024-12-15T20:00:39.8527997+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -5573,7 +5573,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:07.5550201+02:00",
+              "Date": "2024-12-15T20:00:39.8565199+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -5644,7 +5644,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:07.5868043+02:00",
+              "Date": "2024-12-15T20:00:39.8601058+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -5713,7 +5713,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:07.7035342+02:00",
+              "Date": "2024-12-15T20:00:39.8653115+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -5789,7 +5789,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:07.7370052+02:00",
+              "Date": "2024-12-15T20:00:39.8701583+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -5859,7 +5859,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:07.7891122+02:00",
+              "Date": "2024-12-15T20:00:39.8749442+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -5924,7 +5924,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:07.843725+02:00",
+              "Date": "2024-12-15T20:00:39.87967+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -5993,7 +5993,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:07.9372078+02:00",
+              "Date": "2024-12-15T20:00:39.8845778+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -6064,7 +6064,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:07.9672545+02:00",
+              "Date": "2024-12-15T20:00:39.8893008+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -6133,7 +6133,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:08.0626098+02:00",
+              "Date": "2024-12-15T20:00:39.8943165+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -6209,7 +6209,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:08.0893331+02:00",
+              "Date": "2024-12-15T20:00:39.8994004+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -6279,7 +6279,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:08.144496+02:00",
+              "Date": "2024-12-15T20:00:39.9041398+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -6353,7 +6353,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:08.2185871+02:00",
+              "Date": "2024-12-15T20:00:39.9092214+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -6423,7 +6423,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:08.2671861+02:00",
+              "Date": "2024-12-15T20:00:39.9146536+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -6493,7 +6493,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:08.3290397+02:00",
+              "Date": "2024-12-15T20:00:39.9207132+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -6563,7 +6563,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:08.376166+02:00",
+              "Date": "2024-12-15T20:00:39.9257683+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -6633,7 +6633,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:08.4237765+02:00",
+              "Date": "2024-12-15T20:00:39.930298+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -6703,7 +6703,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:08.4723768+02:00",
+              "Date": "2024-12-15T20:00:39.9346951+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -6780,7 +6780,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:08.5205584+02:00",
+              "Date": "2024-12-15T20:00:39.9388391+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -6850,7 +6850,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:08.5681687+02:00",
+              "Date": "2024-12-15T20:00:39.9422482+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -6920,7 +6920,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:08.6169335+02:00",
+              "Date": "2024-12-15T20:00:39.9453123+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -6990,7 +6990,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:08.6768859+02:00",
+              "Date": "2024-12-15T20:00:39.9485275+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -7060,7 +7060,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:08.7366144+02:00",
+              "Date": "2024-12-15T20:00:39.9516178+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -7130,7 +7130,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:08.7794112+02:00",
+              "Date": "2024-12-15T20:00:39.9550669+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -7200,7 +7200,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:08.8304748+02:00",
+              "Date": "2024-12-15T20:00:39.9582428+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -7270,7 +7270,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:08.8807245+02:00",
+              "Date": "2024-12-15T20:00:39.9613217+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -7340,7 +7340,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:08.9379492+02:00",
+              "Date": "2024-12-15T20:00:39.9644315+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -7410,7 +7410,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:08.9835424+02:00",
+              "Date": "2024-12-15T20:00:39.9675287+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -7480,7 +7480,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:09.0329617+02:00",
+              "Date": "2024-12-15T20:00:39.9705902+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -7550,7 +7550,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:09.0869131+02:00",
+              "Date": "2024-12-15T20:00:39.9736755+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -7620,7 +7620,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:09.1414176+02:00",
+              "Date": "2024-12-15T20:00:39.9767241+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -7690,7 +7690,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:09.1965662+02:00",
+              "Date": "2024-12-15T20:00:39.9798113+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -7760,7 +7760,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:09.2476922+02:00",
+              "Date": "2024-12-15T20:00:39.9829025+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -7830,7 +7830,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:09.3146258+02:00",
+              "Date": "2024-12-15T20:00:39.9859998+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -7900,7 +7900,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:09.3818926+02:00",
+              "Date": "2024-12-15T20:00:39.989064+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -7970,7 +7970,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:09.4372892+02:00",
+              "Date": "2024-12-15T20:00:39.9921756+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -8040,7 +8040,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:09.4958063+02:00",
+              "Date": "2024-12-15T20:00:39.9952789+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -8110,7 +8110,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:09.5523799+02:00",
+              "Date": "2024-12-15T20:00:39.9983666+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -8180,7 +8180,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:09.6073314+02:00",
+              "Date": "2024-12-15T20:00:40.0014476+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -8250,7 +8250,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:09.659134+02:00",
+              "Date": "2024-12-15T20:00:40.0047384+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -8320,7 +8320,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:09.7098699+02:00",
+              "Date": "2024-12-15T20:00:40.008056+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
@@ -8390,7 +8390,7 @@
           "Request": null,
           "Response": [
             {
-              "Date": "2024-12-15T22:00:09.7698704+02:00",
+              "Date": "2024-12-15T20:00:40.0110113+00:00",
               "TemperatureC": 11,
               "TemperatureF": 51,
               "Summary": "Freezing"
