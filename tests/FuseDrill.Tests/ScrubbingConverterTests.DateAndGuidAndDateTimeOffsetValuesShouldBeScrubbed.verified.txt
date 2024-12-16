@@ -1,0 +1,13 @@
+﻿{
+  "Id": {
+    "id": "ScrubbedGuid",
+    "date": "ScrubbedDateTimeOffset"
+  },
+  "Name": "In-Memory Test Data",
+  "Date": "ScrubbedDateTime",
+  "Tags": [
+    "example",
+    "snapshot",
+    "memory"
+  ]
+}
