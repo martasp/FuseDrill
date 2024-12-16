@@ -3,18 +3,19 @@ name: "FuseDrill Testing Workflow"
 
 on:
   workflow_dispatch: # Allows manual triggering of the workflow
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  # push:
+  #   branches: [ "main" ]
+  # pull_request:
+  #   branches: [ "main" ]
 
 permissions:
-  contents: write # Enables both read and write access to repository content
-
+  pull-requests: write  # Grants both read and write access to pull requests
+  issues: write         # Grants both read and write access to issues
+  contents: write       # Grants both read and write access to repository contents
+      
 jobs:
   fuseDrill-test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Log in to GitHub Container Registry
         run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
@@ -50,6 +51,7 @@ jobs:
             -e GITHUB_REPOSITORY_OWNER="${{ github.repository_owner }}" \
             -e GITHUB_REPOSITORY="${{ github.repository }}" \
             -e GITHUB_HEAD_REF="${{ github.head_ref }}" \
+            -e GEMINI_API_KEY="${{ secrets.GEMINI_API_KEY }}" \
             ghcr.io/martasp/fusedrill/fusedrill-cli:latest
 
             
