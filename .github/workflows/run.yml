@@ -3,10 +3,10 @@ name: "FuseDrill Testing Workflow"
 
 on:
   workflow_dispatch: # Allows manual triggering of the workflow
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  # push:
+  #   branches: [ "main" ]
+  # pull_request:
+  #   branches: [ "main" ]
 
 permissions:
   pull-requests: write  # Grants both read and write access to pull requests
