@@ -28,9 +28,11 @@ runs:
   steps:
     - name: Checkout code
       uses: actions/checkout@v4
+      shell: bash  # Added shell specification
 
     - name: Pull FuseDrill Docker Image
-      run: docker pull ghcr.io/martasp/fusedrill/fusedrill-cli:latest # Add docker image versioning later
+      run: docker pull ghcr.io/martasp/fusedrill/fusedrill-cli:latest
+      shell: bash  # Added shell specification
 
     - name: Run FuseDrill CLI in Docker
       run: |
@@ -45,4 +47,4 @@ runs:
           -e GITHUB_HEAD_REF="${{ github.head_ref }}" \
           -e GEMINI_API_KEY="${{ secrets.GEMINI_API_KEY }}" \
           ghcr.io/martasp/fusedrill/fusedrill-cli:latest
-
+      shell: bash  # Added shell specification
