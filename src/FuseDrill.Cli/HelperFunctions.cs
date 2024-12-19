@@ -166,7 +166,7 @@ Heres is Contract Difference :
 {{$fuzzingOutputDiff}}
 ----
 """;
-        var code = kernel.CreateFunctionFromPrompt(prompt, executionSettings: new OpenAIPromptExecutionSettings { MaxTokens = 20000 });
+        var code = kernel.CreateFunctionFromPrompt(prompt, executionSettings: new OpenAIPromptExecutionSettings { MaxTokens = 16000 });
 
         var markdownResponse = await kernel.InvokeAsync(code, new()
         {
@@ -255,9 +255,9 @@ Heres is Contract Difference :
 
         //use semantic kernel 
         var kernel = Kernel.CreateBuilder()
-        .AddLMStudioChatCompletionGemini()
+        //.AddGeminiChatCompletion() //Todo make config switch here
+        .AddGithubChatCompletion() // Free for all github accounts but with limits;
         .Build();
-
 
         var llmResponse = await AnalyzeFuzzingDiffWithLLM(kernel, actualDiff);
         return llmResponse;
