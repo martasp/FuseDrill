@@ -1,5 +1,20 @@
 # FuseDrill
 
+[![Publish cli](https://github.com/martasp/FuseDrill/actions/workflows/PublishFusedrillCli.yml/badge.svg?branch=main)](https://github.com/martasp/FuseDrill/actions/workflows/PublishFusedrillCli.yml)
+## 🚀 Introduction
+
+FuseDrill is a tool for fuzzing and simulation testing of OpenAPIs using snapshots. It helps you identify open api contract changes from previous version to current. 
+
+## ✨ Features
+
+- **Automated Fuzzing**: Generates permutations of all api inputs reqests with randomizer.
+- **Detailed Reports**: Get json report on the fuzz test result that will be committed on your source control.
+- **CI/CD Integration**: Integrate with your CI/CD pipeline.
+
+## 📋 Usage
+
+To use FuseDrill, you need to set up a GitHub Actions workflow. Here is an example configuration:
+
 ```yml
 name: FuseDrill Fuzzing/Simulation Testing
 
@@ -55,5 +70,8 @@ jobs:
       - name: Post-run step
         run: |
           echo "Fuzzing test completed"
-
 ```
+
+## 💬 Contact
+
+For any questions or feedback, please open an issue on the [GitHub repository](https://github.com/martasp/FuseDrill/issues).
