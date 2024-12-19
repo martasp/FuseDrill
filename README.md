@@ -71,7 +71,7 @@ jobs:
         run: |
           echo "Fuzzing test completed"
 ```
-## 💬 Example fuzzing report
+## 💬 Example fuzzing report of [API SPEC](https://api.apis.guru/v2/openapi.yaml).
 ```json
 {
   "Seed": 1234567,
