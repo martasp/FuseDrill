@@ -3,14 +3,14 @@
 [![Publish cli](https://github.com/martasp/FuseDrill/actions/workflows/PublishFusedrillCli.yml/badge.svg?branch=main)](https://github.com/martasp/FuseDrill/actions/workflows/PublishFusedrillCli.yml)
 ## 🚀 Introduction
 
-FuseDrill is a tool for fuzzing and simulation testing of OpenAPIs using snapshots. It helps you identify open api contract changes from previous version to current. 
+FuseDrill is a tool for fuzzing and simulation testing of OpenAPIs using snapshots. It helps you identify openAPI contract changes from the previous version to the current one. 
 
 ## ✨ Features
 
-- **Automated Fuzzing**: Generates permutations of all api inputs reqests with randomizer.
-- **Detailed Reports**: Get json report on the fuzz test result that will be committed on your source control.
+- **Automated Fuzzing**: Generates permutations of all API input requests with randomizer.
+- **Detailed Reports**: Get a json report on the fuzz test result that will be committed on your source control.
 - **CI/CD Integration**: Integrate with your CI/CD pipeline.
-
+- **AI helper bot**: Reeds the fuzzing diff report analyzes it and adds suggestion list comment on a pull request.
 ## 📋 Usage
 
 To use FuseDrill, you need to set up a GitHub Actions workflow. Here is an example configuration:
@@ -58,7 +58,7 @@ jobs:
          docker run --network host --rm \
           -e FUSEDRILL_BASE_ADDRESS="http://localhost:8080/" \
           -e FUSEDRILL_OPENAPI_URL="http://localhost:8080/swagger/v1/swagger.json" \
-          -e FUSEDRILL_OAUTH_HEADER="Bearer your-oauth-token"  \
+          -e FUSEDRILL_OAUTH_HEADER="Bearer your-API-test-account-oauth-token"  \
           -e GITHUB_TOKEN="${{ secrets.GITHUB_TOKEN }}" \
           -e SMOKE_FLAG="true" \
           -e GITHUB_REPOSITORY_OWNER="${{ github.repository_owner }}" \
@@ -71,6 +71,154 @@ jobs:
         run: |
           echo "Fuzzing test completed"
 ```
+## 💬 Example fuzzing report
+```json
+{
+  "Seed": 1234567,
+  "TestSuites": [
+    {
+      "ApiCalls": [
+        {
+          "MethodName": "GetAPI_http_get_Async",
+          "Order": 1,
+          "Request": [
+            "RandomString779",
+            "RandomString760"
+          ],
+          "Response": {
+            "StatusCode": 404,
+            "Message": "The HTTP status code of the response was not expected (404).  Status: 404 Response:  <!DOCTYPE html> <html>   <head>     <meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\">     <meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'\">     <title>Page not found &middot; GitHub Pages</title>     <style type=\"text/css\" media=\"screen\">       body {         background-color: #f1f1f1;         margin: 0;         font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;       }        .container { margin",
+            "TypeName": "ApiException"
+          },
+          "HttpMethod": "get"
+        },
+        {
+          "MethodName": "GetMetrics_http_get_Async",
+          "Order": 2,
+          "Response": {
+            "NumSpecs": 3992,
+            "NumAPIs": 2529,
+            "NumEndpoints": 108837,
+            "Unreachable": 166,
+            "Invalid": 688,
+            "Unofficial": 25,
+            "Fixes": 84860,
+            "FixedPct": 23,
+            "Datasets": [
+              {
+                "data": {
+                  "adyen.com": [],
+                  "amadeus.com": [],
+                  "amazonaws.com": [],
+                  "apideck.com": [],
+                  "apisetu.gov.in": [],
+                  "azure.com": [],
+                  "ebay.com": [],
+                  "fungenerators.com": [],
+                  "github.com": [],
+                  "googleapis.com": [],
+                  "hubapi.com": [],
+                  "interzoid.com": [],
+                  "mastercard.com": [],
+                  "microsoft.com": [],
+                  "nexmo.com": [],
+                  "nytimes.com": [],
+                  "Others": [],
+                  "parliament.uk": [],
+                  "sportsdata.io": [],
+                  "twilio.com": [],
+                  "vtex.local": [],
+                  "windows.net": []
+                },
+                "title": []
+              }
+            ],
+            "Stars": 3151,
+            "Issues": 35,
+            "ThisWeek": {
+              "Added": 9,
+              "Updated": 437
+            },
+            "NumDrivers": 10,
+            "NumProviders": 677
+          },
+          "HttpMethod": "get"
+        }
+      ]
+    },
+    {
+      "ApiCalls": [
+        {
+          "MethodName": "GetAPI_http_get_Async",
+          "Order": 1,
+          "Request": [
+            "RandomString275",
+            "RandomString157"
+          ],
+          "Response": {
+            "StatusCode": 404,
+            "Message": "The HTTP status code of the response was not expected (404).  Status: 404 Response:  <!DOCTYPE html> <html>   <head>     <meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\">     <meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'\">     <title>Page not found &middot; GitHub Pages</title>     <style type=\"text/css\" media=\"screen\">       body {         background-color: #f1f1f1;         margin: 0;         font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;       }        .container { margin",
+            "TypeName": "ApiException"
+          },
+          "HttpMethod": "get"
+        },
+        {
+          "MethodName": "GetMetrics_http_get_Async",
+          "Order": 3,
+          "Response": {
+            "NumSpecs": 3992,
+            "NumAPIs": 2529,
+            "NumEndpoints": 108837,
+            "Unreachable": 166,
+            "Invalid": 688,
+            "Unofficial": 25,
+            "Fixes": 84860,
+            "FixedPct": 23,
+            "Datasets": [
+              {
+                "data": {
+                  "adyen.com": [],
+                  "amadeus.com": [],
+                  "amazonaws.com": [],
+                  "apideck.com": [],
+                  "apisetu.gov.in": [],
+                  "azure.com": [],
+                  "ebay.com": [],
+                  "fungenerators.com": [],
+                  "github.com": [],
+                  "googleapis.com": [],
+                  "hubapi.com": [],
+                  "interzoid.com": [],
+                  "mastercard.com": [],
+                  "microsoft.com": [],
+                  "nexmo.com": [],
+                  "nytimes.com": [],
+                  "Others": [],
+                  "parliament.uk": [],
+                  "sportsdata.io": [],
+                  "twilio.com": [],
+                  "vtex.local": [],
+                  "windows.net": []
+                },
+                "title": []
+              }
+            ],
+            "Stars": 3151,
+            "Issues": 35,
+            "ThisWeek": {
+              "Added": 9,
+              "Updated": 437
+            },
+            "NumDrivers": 10,
+            "NumProviders": 677
+          },
+          "HttpMethod": "get"
+        }
+      ]
+    }
+....
+```
+
 
 ## 💬 Contact
 
