@@ -7,7 +7,7 @@ using System.Text.Json;
 
 public static class HelperFunctions
 {
-    public static async Task<bool> CliFlow(string? owner, string? repoName, string? branch, string? githubToken, string? fuseDrillBaseAddres, string? fuseDrillOpenApiUrl, string? fuseDrillTestAccountOAuthHeaderValue, bool smokeFlag)
+    public static async Task<bool> CliFlow(string? owner, string? repoName, string? branch, string? githubToken, string? fuseDrillBaseAddres, string? fuseDrillOpenApiUrl, string? fuseDrillTestAccountOAuthHeaderValue, bool smokeFlag, string? pullRequestNumber)
     {
         // Fuzz testing the API
         var httpClient = new HttpClient
@@ -67,12 +67,13 @@ public static class HelperFunctions
             return false;
         }
 
+        if (int.TryParse(pullRequestNumber, out var pullRequestNumberParsed))
+        {
+            Console.WriteLine("Pull request number does not exists");
+        }
         string llmResponse = await CompareFuzzingsWithLLM(newSnapshotString, existingSnapshotString);
 
-
-        var pullRequestNumber = Environment.GetEnvironmentVariable("GITHUB_EVENT_PULL_REQUEST_NUMBER");
-
-        await PostCommentToPullRequestAsync(owner, repoName, pullRequestNumber, llmResponse, githubClient);
+        await PostCommentToPullRequestAsync(owner, repoName, pullRequestNumberParsed, llmResponse, githubClient);
 
         Console.WriteLine(llmResponse);
         return true;

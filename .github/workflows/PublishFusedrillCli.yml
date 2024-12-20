@@ -31,6 +31,9 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
 
+    - name: Print Environment Variables
+      run: printenv
+
     - name: Dotnet publish image
       run: dotnet publish /t:PublishContainer -c Release --runtime linux-x64
 
@@ -73,9 +76,6 @@ jobs:
           sleep 5
         done
         
-    - name: Print Environment Variables
-      run: printenv
-
     - name: Run FuseDrill CLI in Docker
       run: |
          docker run --network host --rm \
