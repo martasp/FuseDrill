@@ -153,6 +153,7 @@ githubToken = Environment.GetEnvironmentVariable("GITHUB_TOKEN");
 branch = "add-readme";
 repoName = "FuseDrill";
 owner = "martasp";
+pullReqestNumber = "20";
 #endif
 
 
