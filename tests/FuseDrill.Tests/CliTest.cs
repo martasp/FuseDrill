@@ -19,6 +19,7 @@ public class CliFlowTests
         var fuseDrillOpenApiUrl = (envars["FUSEDRILL_OPENAPI_URL"]?.ToString());
         var fuseDrillTestAccountOAuthHeaderValue = envars["FUSEDRILL_TEST_ACCOUNT_OAUTH_HEADER_VALUE"]?.ToString();
         var smokeFlag = envars["SMOKE_FLAG"]?.ToString() == "true";
+        var pullReqestNumber = envars["GITHUB_REF_NAME"]?.ToString()?.Split('/')?[0]; // e.g., 20/merge => 20
 
         // Search for "TestApi.csproj" starting from the current directory
         var apiProjectFileName = "TestApi.csproj";
@@ -32,12 +33,13 @@ public class CliFlowTests
 
         #if DEBUG
                 githubToken = Environment.GetEnvironmentVariable("GITHUB_TOKEN");
+                pullReqestNumber = "20";
                 branch = "feedToAiDiff";
                 repoName = "FuseDrill";
                 owner = "martasp";
         #endif
 
-        await CliFlow(owner, repoName, branch, githubToken, fuseDrillBaseAddres, fuseDrillOpenApiUrl, fuseDrillTestAccountOAuthHeaderValue, smokeFlag);
+        await CliFlow(owner, repoName, branch, githubToken, fuseDrillBaseAddres, fuseDrillOpenApiUrl, fuseDrillTestAccountOAuthHeaderValue, smokeFlag, pullReqestNumber);
         await apiProcessManager.DisposeAsync();
     }
 }
