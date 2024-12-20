@@ -1,4 +1,4 @@
-﻿using FuseDrill.Core;
+using FuseDrill.Core;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
 using Octokit;
@@ -69,29 +69,18 @@ public static class HelperFunctions
 
         string llmResponse = await CompareFuzzingsWithLLM(newSnapshotString, existingSnapshotString);
 
-        // Post the LLM response as a comment on the PR
-        var pullRequest = await GetPullRequestForBranchAsync(owner, repoName, branch, githubClient);
-        if (pullRequest == null)
-        {
-            Console.WriteLine("No open pull request found for the branch.");
-            return false;
-        }
 
-        await PostCommentToPullRequestAsync(owner, repoName, pullRequest.Number, llmResponse, githubClient);
+        var pullRequestNumber = Environment.GetEnvironmentVariable("GITHUB_EVENT_PULL_REQUEST_NUMBER");
+
+        await PostCommentToPullRequestAsync(owner, repoName, pullRequestNumber, llmResponse, githubClient);
 
         Console.WriteLine(llmResponse);
         return true;
     }
 
-    private static async Task<PullRequest?> GetPullRequestForBranchAsync(string owner, string repoName, string branch, GitHubClient githubClient)
-    {
-        var pullRequests = await githubClient.PullRequest.GetAllForRepository(owner, repoName);
-        return pullRequests.FirstOrDefault(pr => pr.Head.Ref == branch);
-    }
 
     private static async Task PostCommentToPullRequestAsync(string owner, string repoName, int pullRequestNumber, string comment, GitHubClient githubClient)
     {
-        //var issueComment = new NewIssueComment(comment);
         await githubClient.Issue.Comment.Create(owner, repoName, pullRequestNumber, comment);
     }
 

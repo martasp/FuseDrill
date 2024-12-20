@@ -73,6 +73,9 @@ jobs:
           sleep 5
         done
         
+    - name: Print Environment Variables
+      run: printenv
+
     - name: Run FuseDrill CLI in Docker
       run: |
          docker run --network host --rm \
