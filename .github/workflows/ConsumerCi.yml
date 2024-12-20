@@ -12,7 +12,7 @@ permissions:
   pull-requests: write  # Grants both read and write access to pull requests
   issues: write         # Grants both read and write access to issues
   contents: write       # Grants both read and write access to repository contents
-      
+
 jobs:
   fuseDrill-test:
     runs-on: ubuntu-latest

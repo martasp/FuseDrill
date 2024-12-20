@@ -150,6 +150,7 @@ var smokeFlag = envars["SMOKE_FLAG"]?.ToString() == "true";
 fuseDrillBaseAddres = "http://localhost:5184/";
 fuseDrillOpenApiUrl = "http://localhost:5184/swagger/v1/swagger.json";
 githubToken = Environment.GetEnvironmentVariable("GITHUB_TOKEN");
+githubToken = Environment.GetEnvironmentVariable("GEMINI_API_KEY");
 branch = "add-readme";
 repoName = "FuseDrill";
 owner = "martasp";
@@ -157,4 +158,4 @@ pullReqestNumber = "20";
 #endif
 
 
-await CliFlow(owner, repoName, branch, githubToken, fuseDrillBaseAddres, fuseDrillOpenApiUrl, fuseDrillTestAccountOAuthHeaderValue, smokeFlag, pullReqestNumber);
+await CliFlow(owner, repoName, branch, githubToken, fuseDrillBaseAddres, fuseDrillOpenApiUrl, fuseDrillTestAccountOAuthHeaderValue, smokeFlag, pullReqestNumber, geminiToken);

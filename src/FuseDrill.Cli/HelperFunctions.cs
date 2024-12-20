@@ -7,7 +7,7 @@ using System.Text.Json;
 
 public static class HelperFunctions
 {
-    public static async Task<bool> CliFlow(string? owner, string? repoName, string? branch, string? githubToken, string? fuseDrillBaseAddres, string? fuseDrillOpenApiUrl, string? fuseDrillTestAccountOAuthHeaderValue, bool smokeFlag, string? pullRequestNumber)
+    public static async Task<bool> CliFlow(string? owner, string? repoName, string? branch, string? githubToken, string? fuseDrillBaseAddres, string? fuseDrillOpenApiUrl, string? fuseDrillTestAccountOAuthHeaderValue, bool smokeFlag, string? pullRequestNumber, string? geminiToken)
     {
         // Fuzz testing the API
         var httpClient = new HttpClient
@@ -67,10 +67,18 @@ public static class HelperFunctions
             return false;
         }
 
-        if (int.TryParse(pullRequestNumber, out var pullRequestNumberParsed))
+        if (!int.TryParse(pullRequestNumber, out var pullRequestNumberParsed))
         {
             Console.WriteLine("Pull request number does not exists");
+            return false;
         }
+
+        if (string.IsNullOrEmpty(geminiToken))
+        {
+            Console.WriteLine("Gemini token is not provided, continuing without AI summarization");
+            return false;
+        }
+
         string llmResponse = await CompareFuzzingsWithLLM(newSnapshotString, existingSnapshotString);
 
         await PostCommentToPullRequestAsync(owner, repoName, pullRequestNumberParsed, llmResponse, githubClient);
