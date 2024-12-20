@@ -137,7 +137,7 @@ var repoName = envars["GITHUB_REPOSITORY"]?.ToString()?.Split('/')?[1]; // e.g.,
 var branch = envars["GITHUB_HEAD_REF"]?.ToString(); // e.g., "refs/heads/branch-name"
 var githubToken = envars["GITHUB_TOKEN"]?.ToString();
 var geminiToken = envars["GEMINI_API_KEY"]?.ToString();
-var pullReqestNumber = envars["GITHUB_EVENT_PULL_REQUEST_NUMBER"]?.ToString();
+var pullReqestNumber = envars["GITHUB_REF_NAME"]?.ToString()?.Split('/')?[0]; // e.g., 20/merge => 20
 
 var fuseDrillBaseAddres = (envars["FUSEDRILL_BASE_ADDRESS"] ?? throw new Exception("FUSEDRILL_BASE_ADDRESS not found in environment variables.")).ToString();
 var fuseDrillOpenApiUrl = (envars["FUSEDRILL_OPENAPI_URL"] ?? throw new Exception("FUSEDRILL_OPENAPI_URL not found in environment variables.")).ToString();
