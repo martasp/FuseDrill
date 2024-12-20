@@ -255,6 +255,33 @@ jobs:
 - **AI helper bot**: Reeds the fuzzing diff report analyzes it and adds suggestion list comment on a pull request.
 - **Vertical fuzzing**: Every internal interaction captured of your dynamic system to a [ASCII tree structure](https://x.com/martasp32/status/1812166465866318080) . 
 
+---
+### FAQ for Your API Fuzzer
+
+#### **General Questions**
+
+**Q1: What is an API fuzzer?**
+A: An API fuzzer is a tool that tests APIs by sending random, unexpected, or malicious inputs to identify potential vulnerabilities or issues in the system. With AI-enhanced fuzzing, the tool crafts more sophisticated and context-aware test cases, increasing the likelihood of uncovering complex issues and ensuring better coverage during testing.
+
+**Q2: Why is fuzzing important for my API?**
+A: Fuzzing is crucial for identifying and fixing hidden vulnerabilities or bugs in your API before they reach your clients. By detecting unexpected behavior early, the tool ensures your changes are expected and won’t disrupt your users' experience when released. It helps maintain trust and reliability in your services.
+
+**Q3: What are snapshot comparisons?**
+A: Snapshot comparison allows you to compare the current state of your API responses against previously saved snapshots, making it easy to spot unintended changes.
+
+#### **Integration and Compatibility**
+
+**Q4: Is the API fuzzer compatible with my local environment?**
+A: Absolutely. The Basic and Team plans are designed to run locally, ensuring no data leaves your environment unless you choose to integrate external tools.
+
+#### **Getting Started**
+
+**Q5: How do I install the API fuzzer?**
+A: The Basic version is open-source and available on GitHub. Follow the installation guide in the repository to set it up locally.
+
+If you have further questions about your complicated case and setup, feel free to reach out via [![Mail Me](https://img.shields.io/badge/Mail%20Me-Email-blue)](mailto:martasp3289@gmail.com)
+
+
 ## 💬 Contact
 
 For any questions or feedback, please open an issue on the [GitHub repository](https://github.com/martasp/FuseDrill/issues).
