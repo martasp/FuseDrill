@@ -1,4 +1,4 @@
-﻿using FuseDrill.Core;
+using FuseDrill.Core;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
 using Octokit;
@@ -7,7 +7,7 @@ using System.Text.Json;
 
 public static class HelperFunctions
 {
-    public static async Task<bool> CliFlow(string? owner, string? repoName, string? branch, string? githubToken, string? fuseDrillBaseAddres, string? fuseDrillOpenApiUrl, string? fuseDrillTestAccountOAuthHeaderValue, bool smokeFlag)
+    public static async Task<bool> CliFlow(string? owner, string? repoName, string? branch, string? githubToken, string? fuseDrillBaseAddres, string? fuseDrillOpenApiUrl, string? fuseDrillTestAccountOAuthHeaderValue, bool smokeFlag, string? pullRequestNumber, string? geminiToken)
     {
         // Fuzz testing the API
         var httpClient = new HttpClient
@@ -67,31 +67,30 @@ public static class HelperFunctions
             return false;
         }
 
-        string llmResponse = await CompareFuzzingsWithLLM(newSnapshotString, existingSnapshotString);
-
-        // Post the LLM response as a comment on the PR
-        var pullRequest = await GetPullRequestForBranchAsync(owner, repoName, branch, githubClient);
-        if (pullRequest == null)
+        if (!int.TryParse(pullRequestNumber, out var pullRequestNumberParsed))
         {
-            Console.WriteLine("No open pull request found for the branch.");
+            Console.WriteLine("Pull request number does not exists");
             return false;
         }
 
-        await PostCommentToPullRequestAsync(owner, repoName, pullRequest.Number, llmResponse, githubClient);
+        if (string.IsNullOrEmpty(geminiToken))
+        {
+            Console.WriteLine("Gemini token is not provided, continuing without AI summarization");
+            return false;
+        }
+
+        string llmResponse = await CompareFuzzingsWithLLM(newSnapshotString, existingSnapshotString);
+
+        await PostCommentToPullRequestAsync(owner, repoName, pullRequestNumberParsed, llmResponse, githubClient);
 
         Console.WriteLine(llmResponse);
         return true;
     }
 
-    private static async Task<PullRequest?> GetPullRequestForBranchAsync(string owner, string repoName, string branch, GitHubClient githubClient)
-    {
-        var pullRequests = await githubClient.PullRequest.GetAllForRepository(owner, repoName);
-        return pullRequests.FirstOrDefault(pr => pr.Head.Ref == branch);
-    }
 
     private static async Task PostCommentToPullRequestAsync(string owner, string repoName, int pullRequestNumber, string comment, GitHubClient githubClient)
     {
-        //var issueComment = new NewIssueComment(comment);
+        Console.WriteLine($"Creating comment at PR:{pullRequestNumber}");
         await githubClient.Issue.Comment.Create(owner, repoName, pullRequestNumber, comment);
     }
 
