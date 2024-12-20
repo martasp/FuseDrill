@@ -82,6 +82,7 @@ public static class HelperFunctions
 
     private static async Task PostCommentToPullRequestAsync(string owner, string repoName, int pullRequestNumber, string comment, GitHubClient githubClient)
     {
+        Console.WriteLine($"Creating comment at PR:{pullRequestNumber}");
         await githubClient.Issue.Comment.Create(owner, repoName, pullRequestNumber, comment);
     }
 
