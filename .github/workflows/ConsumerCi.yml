@@ -53,7 +53,7 @@ jobs:
             -e GITHUB_HEAD_REF="${{ github.head_ref }}" \
             -e GITHUB_REF_NAME="${{ github.ref_name }}" \
             -e GEMINI_API_KEY="${{ secrets.GEMINI_API_KEY }}" \
-            ghcr.io/fusedrill/fusedrill/fusedrill-cli:latest
+            ghcr.io/fusedrill/fusedrill-cli:latest
 
             
 
