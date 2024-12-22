@@ -1,4 +1,4 @@
-name: "FuseDrillApi"
+name: "FuseDrill"
 description: "Automatic fuzzing/simulation testing for OpenAPIs"
 author: "Martynas Pocius"
 branding:
