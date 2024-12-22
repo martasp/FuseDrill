@@ -8,8 +8,8 @@ FuseDrill is a tool for **fuzzing** and **simulation** testing of **OpenAPIs** u
 ## ✨ Features
 
 - **Automated Fuzzing**: Generates permutations of all API input requests of all API methods with randomizer.
-- **Detailed Reports**: Get a [json report](https://github.com/fusedrill/FuseDrill/edit/add-readme/README.md?pr=%2Ffusedrill%2FFuseDrill%2Fpull%2F18#-example-fuzzing-report-of-api-spec) on the fuzz test result that will be [committed to your source control](https://github.com/fusedrill/FuseDrill/blob/main/api-snapshot.json) to create a baseline of correctness.
-- **CI/CD Integration**: Integrate with your [CI/CD pipeline](https://github.com/fusedrill/FuseDrill/edit/add-readme/README.md?pr=%2Ffusedrill%2FFuseDrill%2Fpull%2F18#-remote-fuzzing).
+- **Detailed Reports**: Get a [json report](https://github.com/fusedrill/FuseDrill?tab=readme-ov-file#-example-fuzzing-report-of-api-spec) on the fuzz test result that will be [committed to your source control](https://github.com/fusedrill/FuseDrill/blob/main/api-snapshot.json) to create a baseline of correctness.
+- **CI/CD Integration**: Integrate with your [CI/CD pipeline](https://github.com/fusedrill/FuseDrill?tab=readme-ov-file#-remote-fuzzing).
 - **AI helper bot**: Reeds the fuzzing diff report analyzes it and adds suggestion list [comment](https://github.com/fusedrill/FuseDrill/pull/20#issuecomment-2557747106) on a pull request.
 ## 📋 Usage
 
