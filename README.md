@@ -1,6 +1,6 @@
 # FuseDrill - Remove bugs by fuzzing your application openapi.
 
-[![Publish cli](https://github.com/martasp/FuseDrill/actions/workflows/PublishFusedrillCli.yml/badge.svg?branch=main)](https://github.com/martasp/FuseDrill/actions/workflows/PublishFusedrillCli.yml)
+[![Publish cli](https://github.com/fusedrill/FuseDrill/actions/workflows/PublishFusedrillCli.yml/badge.svg?branch=main)](https://github.com/fusedrill/FuseDrill/actions/workflows/PublishFusedrillCli.yml)
 ## 🚀 Introduction
 
 FuseDrill is a tool for **fuzzing** and **simulation** testing of **OpenAPIs** using snapshots. It helps you identify open API contract changes from the previous version to the current one. 
@@ -8,9 +8,9 @@ FuseDrill is a tool for **fuzzing** and **simulation** testing of **OpenAPIs** u
 ## ✨ Features
 
 - **Automated Fuzzing**: Generates permutations of all API input requests of all API methods with randomizer.
-- **Detailed Reports**: Get a [json report](https://github.com/martasp/FuseDrill/edit/add-readme/README.md?pr=%2Fmartasp%2FFuseDrill%2Fpull%2F18#-example-fuzzing-report-of-api-spec) on the fuzz test result that will be [committed to your source control](https://github.com/martasp/FuseDrill/blob/main/api-snapshot.json) to create a baseline of correctness.
-- **CI/CD Integration**: Integrate with your [CI/CD pipeline](https://github.com/martasp/FuseDrill/edit/add-readme/README.md?pr=%2Fmartasp%2FFuseDrill%2Fpull%2F18#-remote-fuzzing).
-- **AI helper bot**: Reeds the fuzzing diff report analyzes it and adds suggestion list [comment](https://github.com/martasp/FuseDrill/pull/20#issuecomment-2557747106) on a pull request.
+- **Detailed Reports**: Get a [json report](https://github.com/fusedrill/FuseDrill/edit/add-readme/README.md?pr=%2Ffusedrill%2FFuseDrill%2Fpull%2F18#-example-fuzzing-report-of-api-spec) on the fuzz test result that will be [committed to your source control](https://github.com/fusedrill/FuseDrill/blob/main/api-snapshot.json) to create a baseline of correctness.
+- **CI/CD Integration**: Integrate with your [CI/CD pipeline](https://github.com/fusedrill/FuseDrill/edit/add-readme/README.md?pr=%2Ffusedrill%2FFuseDrill%2Fpull%2F18#-remote-fuzzing).
+- **AI helper bot**: Reeds the fuzzing diff report analyzes it and adds suggestion list [comment](https://github.com/fusedrill/FuseDrill/pull/20#issuecomment-2557747106) on a pull request.
 ## 📋 Usage
 
 To use FuseDrill, you need to set up a GitHub Actions workflow. Here is an example configuration:
@@ -34,7 +34,7 @@ jobs:
 
     steps:
     - name: Pull FuseDrill Docker Image
-      run: docker pull ghcr.io/martasp/fusedrill/fusedrill-cli:latest # Add docker image versioning later
+      run: docker pull ghcr.io/fusedrill/fusedrill-cli:latest # Add docker image versioning later
 
     - name: Run FuseDrill CLI in Docker
       run: |
@@ -48,7 +48,7 @@ jobs:
           -e GITHUB_REPOSITORY="${{ github.repository }}" \
           -e GITHUB_HEAD_REF="${{ github.head_ref }}" \
           -e GEMINI_API_KEY="${{ secrets.GEMINI_API_KEY }}" \
-          ghcr.io/martasp/fusedrill/fusedrill-cli:latest
+          ghcr.io/fusedrill/fusedrill-cli:latest
 
       - name: Post-run step
         run: |
@@ -208,14 +208,14 @@ jobs:
     steps:
 # ------------ Deploy your app or run inside the GitHub CI/CD 
       - name: Pull FuseDrill test api Docker Image
-        run: docker pull ghcr.io/martasp/fusedrill/testapi:latest
+        run: docker pull ghcr.io/fusedrill/fusedrill/testapi:latest
         
       - name: Run Test API
         run: |
           docker run -d \
             -e ASPNETCORE_ENVIRONMENT="Development" \
             -p 8080:8080 \
-            ghcr.io/martasp/fusedrill/testapi:latest
+            ghcr.io/fusedrill/fusedrill/testapi:latest
           
       - name: Wait for Test API to be Ready
         run: |
@@ -226,7 +226,7 @@ jobs:
           done
 # ------------------------------------------------------
     - name: Pull FuseDrill Docker Image
-      run: docker pull ghcr.io/martasp/fusedrill/fusedrill-cli:latest # Add docker image versioning later
+      run: docker pull ghcr.io/fusedrill/fusedrill-cli:latest # Add docker image versioning later
 
     - name: Run FuseDrill CLI in Docker
       run: |
@@ -240,7 +240,7 @@ jobs:
           -e GITHUB_REPOSITORY="${{ github.repository }}" \
           -e GITHUB_HEAD_REF="${{ github.head_ref }}" \
           -e GEMINI_API_KEY="${{ secrets.GEMINI_API_KEY }}" \
-          ghcr.io/martasp/fusedrill/fusedrill-cli:latest
+          ghcr.io/fusedrill/fusedrill-cli:latest
 
       - name: Post-run step
         run: |
@@ -284,4 +284,4 @@ If you have further questions about your complicated case and setup, feel free t
 
 ## 💬 Contact
 
-For any questions or feedback, please open an issue on the [GitHub repository](https://github.com/martasp/FuseDrill/issues).
+For any questions or feedback, please open an issue on the [GitHub repository](https://github.com/fusedrill/FuseDrill/issues).
