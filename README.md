@@ -5,6 +5,16 @@
 
 FuseDrill is a tool for **fuzzing** and **simulation** testing of **OpenAPIs** using snapshots. It helps you identify open API contract changes from the previous version to the current one. 
 
+### Try it out
+```cmd
+docker run --network host --rm \
+ -e FUSEDRILL_BASE_ADDRESS="https://api.apis.guru/v2" \
+ -e FUSEDRILL_OPENAPI_URL="https://api.apis.guru/v2/openapi.yaml" \
+ -e FUSEDRILL_OAUTH_HEADER="Bearer your-API-test-account-oauth-token"  \
+ -e SMOKE_FLAG="true" \
+ ghcr.io/fusedrill/fusedrill-cli:latest
+```
+
 ## ✨ Features
 
 - **Automated Fuzzing**: Generates permutations of all API input requests of all API methods with randomizer.
